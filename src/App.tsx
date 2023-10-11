@@ -1,8 +1,13 @@
-import React from 'react'
+import { Header, Main, Footer, Navbar } from "./layout/index"
 
 const App = () => {
   return (
-    <div>App</div>
+    <>
+      <Navbar />
+      <Header />
+      <Main />
+      <Footer />
+    </>
   )
 }
 
