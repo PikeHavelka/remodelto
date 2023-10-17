@@ -1,0 +1,106 @@
+@mixin FlatHouseReconstruction {
+  .flat-reconstruction-img-container,
+  .house-reconstruction-img-container {
+    max-width: 13rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 1rem 0;
+  }
+
+  .flat-flex-wrapper {
+    border-right: 5px solid var(--decoration-color);
+    padding-right: 1rem;
+  }
+
+  .house-flex-wrapper {
+    border-left: 5px solid var(--decoration-color);
+    padding-left: 1rem;
+  }
+
+  .flat-flex-wrapper,
+  .house-flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .flat-reconstruction-title,
+    .house-reconstruction-title {
+      color: var(--general-color);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+
+      font-family: var(--title-text);
+      font-weight: 500;
+    }
+
+    .flat-reconstruction-text,
+    .house-reconstruction-text {
+      color: var(--text-color);
+      letter-spacing: .6px;
+      line-height: 1.4rem;
+
+      font-family: var(--normal-text);
+    }
+  }
+
+  @media (max-width: 825px) {
+    .flat-reconstruction-img-container,
+    .house-reconstruction-img-container {
+      margin: 2rem 0;
+    }
+  }
+
+  @media (max-width: 750px) {
+    .flat-reconstruction-img-container {
+      max-width: 10rem;
+      overflow: none;
+      border-radius: 50%;
+      margin: 5rem 0;
+    }
+
+    .house-reconstruction-img-container {
+      max-width: 10rem;
+      overflow: none;
+      border-radius: 50%;
+      margin: 3.5rem 0;
+    }
+  }
+
+  @media (max-width: 625px) {
+    .flat-reconstruction-img-container,
+    .house-reconstruction-img-container {
+      margin: 0rem 0;
+    }
+  
+    .flat-flex-wrapper,
+    .house-flex-wrapper {
+  
+      .flat-reconstruction-title,
+      .house-reconstruction-title {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @media (max-width: 500px) {
+    .flat-flex-wrapper {
+      border-right: none;
+      border-top: 5px solid var(--decoration-color);
+      padding-right: 0rem;
+
+      .flat-reconstruction-title {
+        padding-top: 1rem;
+      }
+    }
+  
+    .house-flex-wrapper {
+      border-left: none;
+      border-top: 5px solid var(--decoration-color);
+      padding-left: 0rem;
+
+      .house-reconstruction-title {
+        padding-top: 1rem;
+      }
+    }
+  }
+}

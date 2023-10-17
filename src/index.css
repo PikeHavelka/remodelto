@@ -1,8 +1,28 @@
+:root {
+  /* Font colors */
+  --general-color: rgb(65, 34, 0);
+  --secondary-color: rgba(0, 0, 0, 0.9);
+  --text-color: rgba(0, 0, 0, 0.8);
+
+  /* Font hover colors */
+  --general-hover-color: rgba(65, 34, 0, 0.75);
+
+  /* Font decoration colors */
+  --decoration-color: rgba(65, 34, 0);
+  --button-color: rgba(65, 34, 0);
+
+  /* Font-family style */
+  --title-text: 'Poppins', sans-serif;
+  --normal-text: 'Crimson Text', serif;
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
+
+  text-decoration: none;
   box-sizing: border-box;
 }
 
@@ -14,11 +34,12 @@ img {
 
 .container {
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 .5rem;
+
   max-width: 950px;
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: rgba(0, 0, 0, 0.466);
+  background-color: white;
+  scroll-behavior: smooth;
 }

@@ -1,5 +1,4 @@
 import "./navbar.scss"
-import logo from "../../assets/images/remodelToLogo.jpg"
 import { useState } from "react"
 
 export const Navbar = () => {
@@ -13,8 +12,9 @@ export const Navbar = () => {
     <nav className="navbar-main">
       <div className="container flex-wrapper">
         <div className="navbar-logo">
-          <a href="#">
-            <img src={logo} alt="logo firmy RemodelTO" />
+          <a href="#" className="navbar-logo-link">
+            <span className="logo-remodel">Remodel <span className="logo-to">TO</span></span>
+            <span className="logo-otradovec">OTRADOVEC</span>
           </a>
         </div>
 
@@ -25,11 +25,30 @@ export const Navbar = () => {
           <li><a href="">Kontakt</a></li>
         </ul>
 
-        <div className="navbar-hamburger-menu" onClick={hamburgerMenuHandle}>
-          <span className="top line"></span>
-          <span className="mid line"></span>
-          <span className="bot line"></span>
-        </div>
+        <button 
+          className="navbar-hamburger-menu-btn"
+          onClick={hamburgerMenuHandle}
+          aria-controls="primary-navigation"
+          aria-expanded={showMenu}
+        >
+          <svg 
+            className="navbar-hamburger-menu-svg"
+            stroke="var(--button-color)"
+            fill="none"
+            viewBox="-10 -10 120 120"
+            width="30"
+            height="25"
+          >
+            <path 
+              className="line"
+              strokeWidth="8"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m 20 40 h 60 a 1 1 0 0 1 0 20 h -60 a 1 1 0 0 1 0 -40 h 30 v 70"
+            >
+            </path>
+          </svg>
+        </button>
       </div>
     </nav>
   )

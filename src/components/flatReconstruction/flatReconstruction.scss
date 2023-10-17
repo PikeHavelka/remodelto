@@ -1,0 +1,45 @@
+@import "../../partials/mixins";
+
+.flat-reconstruction {
+  padding: 10rem 0;
+  background-color: rgb(240, 240, 240);
+  
+  .flat-reconstruction-container {
+    display: flex;
+    gap: 2rem;
+
+    @include FlatHouseReconstruction;
+  }
+}
+
+@media (max-width: 975px) {
+  .flat-reconstruction {
+    padding: 5rem 0;
+
+    .flat-reconstruction-container {
+      margin-right: 1rem;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 625px) {
+  .flat-reconstruction {
+    padding: 5rem 0 2rem;
+    
+    .flat-reconstruction-container {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  .house-reconstruction {
+    .house-reconstruction-container {
+      margin-right: 0rem;
+    }
+  }
+}
