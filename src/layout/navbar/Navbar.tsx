@@ -12,26 +12,38 @@ export const Navbar = () => {
     <nav className="navbar-main">
       <div className="container flex-wrapper">
         <div className="navbar-logo">
-          <a href="#" className="navbar-logo-link">
-            <span className="logo-remodel">Remodel <span className="logo-to">TO</span></span>
-            <span className="logo-otradovec">OTRADOVEC</span>
+          <a href="/" className="navbar-logo-link">
+            <span className="logo-remodel">Remodel<span className="logo-to">TO</span></span>
+            <span className="logo-motto">Vy sníte, my stavíme</span>
           </a>
         </div>
 
         <ul className={showMenu ? "show" : "hide"}>
-          <li><a href="">Služby</a></li>
-          <li><a href="">Reference</a></li>
-          <li><a href="">O nás</a></li>
-          <li><a href="">Kontakt</a></li>
+          <li>
+            <a href="/#o-nas">O nás</a>
+          </li>
+
+          <li>
+            <a href="/#sluzby">Služby</a>
+          </li>
+
+          <li>
+            <a href="/#reference">Reference</a>
+          </li>
+
+          <li>
+            <a href="#kontakt">Kontakt</a>
+          </li>
         </ul>
 
-        <button 
+        <button
           className="navbar-hamburger-menu-btn"
           onClick={hamburgerMenuHandle}
-          aria-controls="primary-navigation"
+          aria-controls="primární navigace"
           aria-expanded={showMenu}
+          aria-label="Tlačitko zobrazující hlavní navigaci stránky"
         >
-          <svg 
+          <svg
             className="navbar-hamburger-menu-svg"
             stroke="var(--button-color)"
             fill="none"
@@ -39,7 +51,7 @@ export const Navbar = () => {
             width="30"
             height="25"
           >
-            <path 
+            <path
               className="line"
               strokeWidth="8"
               strokeLinecap="round"

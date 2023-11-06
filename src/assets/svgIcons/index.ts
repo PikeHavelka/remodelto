@@ -1,2 +1,5 @@
 export { FlatIcon } from "./FlatIcon"
 export { HouseIcon } from "./HouseIcon"
+export { EmailIcon } from "./EmailIcon"
+export { FacebookIcon } from "./FacebookIcon"
+export { PhoneIcon } from "./PhoneIcon"

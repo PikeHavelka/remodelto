@@ -1,0 +1,115 @@
+@import "../../partials/mixins";
+
+.references {
+  @include clamp("padding-top", 3.5rem, 5vw, 8rem);
+
+  .references-article {
+    display: flex;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+    flex-direction: column;
+      -ms-flex-direction: column;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+    align-items: center;
+      -webkit-align-items: center;
+
+    .references-title-text-top {
+      margin: 0 auto 2rem auto;
+      max-width: 750px;
+      text-align: center;
+
+      .references-subtitle {
+        @include TitleTextH2;
+        margin-bottom: .5rem;
+        color: var(--secondary-color);
+      }
+
+      .references-text {
+        @include NormalText;
+        margin: 1rem 0 3rem;
+
+        .references-text-href-italic {
+          font-style: italic;
+          color: var(--general-color);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .references-img-slider {
+      position: relative;
+
+      @include clamp("width", 10rem, 95vw, 38rem);
+      @include clamp("height", 7.5rem, 70vw, 25rem);
+
+      overflow: hidden;
+      box-shadow: 1px 1px 10px var(--general-color);
+      border: 1rem ridge var(--decoration-color);
+
+      div {
+        position: absolute;
+        inset: unset;
+        opacity: 0;
+
+        transition: all 1.5s linear;
+          -webkit-transition: all 1.5s linear;
+          -moz-transition: all 1.5s linear;
+          -o-transition: all 1.5s linear;
+
+        &.active-slide {
+          transform: translateX(0);
+            -ms-transform: translateX(0);
+            -moz-transform: translateX(0);
+            -webkit-transform: translateX(0);
+            -o-transform: translateX(0);
+          opacity: 1;
+        }
+
+        &.last-slide {
+          transform: translateX(-100%);
+            -ms-transform: translateX(-100%);
+            -moz-transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            -o-transform: translateX(-100%);
+        }
+
+        &.next-slide {
+          transform: translateX(100%);
+            -ms-transform: translateX(100%);
+            -moz-transform: translateX(100%);
+            -webkit-transform: translateX(100%);
+            -o-transform: translateX(100%);
+        }
+      }
+    }
+
+    .references-btn {
+      @include TitleTextH2;
+
+      padding: .5rem 1rem;
+      margin: 5rem 0;
+
+      color: var(--general-bg-color);
+      border: none;
+      background-color: var(--decoration-color);
+
+      cursor: pointer;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: var(--secondary-hover-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .references {
+    .references-article {
+      padding-inline: 2rem;
+    }
+  }
+}

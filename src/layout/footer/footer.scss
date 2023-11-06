@@ -1,0 +1,15 @@
+@import "../../partials/mixins";
+
+footer {
+ background: var(--footer-bg-color);
+ 
+ .rights-reserved {
+    @include TitleTextH2;
+    padding: 1.5rem 0;
+
+    font-size: 1rem;
+    color: var(--footer-styling);
+
+    border-top: 1px solid var(--footer-styling);
+ }
+}

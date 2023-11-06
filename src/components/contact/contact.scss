@@ -1,0 +1,32 @@
+@import "../../partials/mixins";
+
+.contact-section {
+  padding: .5rem;
+
+  .contact-section-company-owner {
+    @include TitleTextH2;
+
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--general-bg-color);
+    
+    img {
+      max-width: 8rem;
+      border-radius: 50%;
+      margin-bottom: .5rem;
+    }
+  }
+  
+  .contact-section-contact {
+    margin-top: .5rem;
+
+    display: flex;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+    justify-content: center;
+      -webkit-justify-content: center;
+    gap: .5rem;
+  }
+}

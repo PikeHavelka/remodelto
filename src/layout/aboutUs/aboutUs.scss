@@ -1,0 +1,56 @@
+@import "../../partials/mixins";
+
+.about-us-section {
+  @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+  @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+  .about-us-article {
+    @include FlexJustifyItemCenter;
+    @include clamp("gap", 3.5rem, 5vw, 8rem);
+
+    .about-us-container {
+      text-align: center;
+
+      .about-us-subtitle {
+        @include TitleTextH2;
+        margin-bottom: 1rem;
+        
+        color: var(--secondary-color);
+      }
+
+      .about-us-text {
+        @include NormalText;
+      }
+
+      .about-us-span-italic {
+        font-style: italic;
+      }
+    }
+
+    .about-us-img-container {
+      padding: 1rem;
+      max-width: 80%;
+
+      border: 5px solid black;
+      border-style: groove;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .about-us-section {
+
+    .about-us-article {
+      flex-direction: column;
+        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .about-us-section {
+    padding-top: 3.5rem;
+  }
+}

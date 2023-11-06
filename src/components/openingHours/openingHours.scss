@@ -1,0 +1,38 @@
+@import "../../partials/mixins";
+
+.opening-hours-section {
+  padding-left: .5rem;
+  
+  .opening-hours-title {
+    @include TitleTextH2;
+    margin-bottom: .5rem;
+
+    font-size: 1rem;
+    color: var(--general-bg-color);
+    text-align: center;
+  }
+  
+  .opening-hours-text {
+    @include NormalText;
+    color: var(--prefooter-icons);
+    
+    display: flex;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+    justify-content: center;
+      -webkit-justify-content: center;
+    gap: 2rem;
+  }
+
+  .opening-hours-time {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1100px) {
+  .opening-hours-section {
+    margin-top: .5rem;
+  }
+}

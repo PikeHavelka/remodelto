@@ -1,11 +1,14 @@
-import { FlatReconstruction, HouseReconstruction } from "../../components/index"
-import "./main.scss"
+import { Services, AboutUs, References } from "../index"
+import { BackgroundDesign, BackgroundDesign2 } from "../../components/index"
 
 export const Main = () => {
   return (
     <main>
-      <HouseReconstruction />
-      <FlatReconstruction />
+      <AboutUs />
+      <BackgroundDesign />
+      <Services />
+      <BackgroundDesign2 />
+      <References />
     </main>
   )
 }

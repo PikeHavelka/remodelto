@@ -1,0 +1,19 @@
+@import "../../partials/mixins";
+
+.error-page {
+  margin: 0 auto;
+  padding-block: 5rem;
+
+  .error-page-text-container {
+    text-align: center;
+
+    .error-page-title {
+      @include TitleTextH1;
+      margin-bottom: .5rem;
+    }
+
+    .error-page-text {
+      @include NormalText
+    }
+  }
+}

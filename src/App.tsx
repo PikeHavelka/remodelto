@@ -1,13 +1,16 @@
-import { Header, Main, Footer, Navbar } from "./layout/index"
+import { Main } from "./layout/index"
+import { Routes, Route } from "react-router-dom"
+import { SharedLayout, ErrorPage, MoreReferences } from "./pages/index"
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <Header />
-      <Main />
-      <Footer />
-    </>
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Main />} />
+        <Route path="/nase-reference" element={<MoreReferences />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Route>
+    </Routes>
   )
 }
 

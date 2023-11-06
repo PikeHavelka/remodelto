@@ -1,8 +1,9 @@
 export const FlatIcon = () => {
   return (
     <svg
-      width="90"
-      height="90"
+      className="header-icon"
+      width="4.5rem"
+      height="4.5rem"
       viewBox="0 0 256 256"
     >
       <g 

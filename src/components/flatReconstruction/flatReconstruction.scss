@@ -2,10 +2,13 @@
 
 .flat-reconstruction {
   padding: 10rem 0;
-  background-color: rgb(240, 240, 240);
-  
+
   .flat-reconstruction-container {
     display: flex;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
     gap: 2rem;
 
     @include FlatHouseReconstruction;
@@ -23,15 +26,24 @@
   }
 }
 
-@media (max-width: 625px) {
+@media (max-width: 649px) {
   .flat-reconstruction {
     padding: 5rem 0 2rem;
-    
+
     .flat-reconstruction-container {
       display: flex;
-      flex-direction: column-reverse;
-      justify-content: center;
-      align-items: center;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+    flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+      -moz-flex-direction: column-reverse;
+      -webkit-flex-direction: column-reverse;
+    justify-content: center;
+      -webkit-justify-content: center;
+    align-items: center;
+      -webkit-align-items: center;
     }
   }
 }

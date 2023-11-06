@@ -1,0 +1,66 @@
+@import "../../partials/mixins";
+
+.more-references {
+  .more-references-article {
+    @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+    @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+    .more-references-title {
+      @include TitleTextH1;
+
+      padding-left: .5rem;
+      border-left: 5px solid var(--decoration-color);
+    }
+
+    .more-references-subtitle {
+      @include TitleTextH3;
+      margin-block: 1rem;
+
+      color: var(--text-color);
+      font-size: .9rem;
+    }
+
+    .more-references-text {
+      @include NormalText;
+      margin-top: 3.5rem;
+    }
+
+    .more-references-show-more-btn {
+      display: block;
+
+      padding: .5rem 1rem;
+      margin-top: 5rem;
+
+      width: 100%;
+      cursor: pointer;
+
+      @include TitleTextH3;
+      color: var(--general-bg-color);
+
+      border: none;
+      border-radius: 5px;
+      background-color: var(--button-color);
+
+      &:hover {
+        background-color: var(--secondary-hover-color);
+      }
+    }
+
+    .more-references-dont-work-btn {
+      display: block;
+
+      padding: .5rem 1rem;
+      margin-top: 5rem;
+
+      width: 100%;
+      cursor: default;
+
+      @include TitleTextH3;
+      color: var(--general-bg-color);
+
+      border: none;
+      border-radius: 5px;
+      background-color: var(--btn-dont-work);
+    }
+  }
+}

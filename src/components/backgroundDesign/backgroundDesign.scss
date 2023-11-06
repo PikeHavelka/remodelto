@@ -1,0 +1,26 @@
+@import "../../partials/mixins";
+
+.section-bg {
+  background: url("../../assets/images/bathroomBackground.jpeg") no-repeat center/cover;
+  background-position: center center;
+  @include clamp("height", 15rem, 25vw, 25rem);
+}
+
+.section-bg2 {
+  background: url("../../assets/images/kitchenBackground.jpeg") no-repeat center/cover;
+  background-position: center center;
+  @include clamp("height", 15rem, 25vw, 25rem);
+}
+
+.section-bg3 {
+  background: url("../../assets/images/terraceBackground.jpg") no-repeat center/cover;
+  background-position: center center;
+  height: 40rem;
+
+  .overlay {
+    background-color: var(--overlay-bg-color);
+
+    height: 100%;
+    width: 100%;
+  }
+}

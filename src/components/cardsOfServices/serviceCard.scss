@@ -1,0 +1,50 @@
+@import "../../partials/mixins";
+
+.services-img-text {
+  flex: 1 1 20rem;
+    -webkit-flex: 1 1 20rem;
+    -ms-flex: 1 1 20rem;
+    -moz-flex: 1 1 20rem;
+
+  display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+  flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+
+  background-color: var(--general-bg-color);
+  box-shadow: 1px 1px 10px var(--general-color);
+  border-bottom: 10px solid var(--decoration-color);
+
+  .services-img-container {
+    overflow: hidden;
+  }
+
+  .services-subtitle {
+    @include TitleTextH3;
+    padding: 1.5rem 0 0 2rem;
+  }
+
+  .services-text {
+    @include NormalText;
+    padding: 1.5rem 2rem 2rem 2rem;
+
+    a {
+      font-style: italic;
+      color: var(--general-color);
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 1300px) {
+  .services {
+    .services-article {
+      padding-inline: 2rem;
+    }
+  }
+}
