@@ -1,5 +1,5 @@
 import "./blockOfMoreReferences.scss"
-import remodelToPlaceHolder from "../../assets/images/remodelToPlaceHolder.jpg"
+import remodelToPlaceHolder from "../../assets/images/remodelToPlaceHolder.png"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import { MoreReferencesWithImages } from "../../types/allTypes"
 import { useState } from "react"
