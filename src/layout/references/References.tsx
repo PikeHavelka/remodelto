@@ -3,7 +3,6 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 
 export const References = () => {
-
   const [index, setIndex] = useState(0)
 
   /* Store Assets from folders */

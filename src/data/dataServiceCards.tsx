@@ -1,9 +1,9 @@
-import livingroom from "../assets/images/serviceCardImages/servicesCardLivingroom.jpeg"
-import stairs from "../assets/images/serviceCardImages/servicesCardStairs.jpeg"
-import buildingExtension from "../assets/images/serviceCardImages/servicesCardBuildingExtension.jpeg"
-import paintingFloorPlan from "../assets/images/serviceCardImages/servicesCardPaintingFloorPlan.jpg"
-import outdoorPool from "../assets/images/serviceCardImages/servicesCardOutdoorPool.jpeg"
-import roomRenovation from "../assets/images/serviceCardImages/servicesCardRoomRenovation.jpeg"
+import livingroom from "../assets/images/serviceCardImages/servicesCardLivingroom.png"
+import stairs from "../assets/images/serviceCardImages/servicesCardStairs.png"
+import buildingExtension from "../assets/images/serviceCardImages/servicesCardBuildingExtension.png"
+import paintingFloorPlan from "../assets/images/serviceCardImages/servicesCardPaintingFloorPlan.png"
+import outdoorPool from "../assets/images/serviceCardImages/servicesCardOutdoorPool.png"
+import roomRenovation from "../assets/images/serviceCardImages/servicesCardRoomRenovation.png"
 import { ServiceCards } from "../types/allTypes"
 
 const serviceCardsData: { [key: string]: ServiceCards } = {

@@ -76,4 +76,64 @@
     }
   }
 }
+/********************************************/
 
+// PopUpImg
+.block-of-more-references-popUpImg {
+  display: block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  min-width: 100vw;
+  min-height: 100vh;
+  
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.85);
+
+  .block-of-more-references-popUpImg-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    max-width: 35vw;
+  }
+
+  .cross {
+    position: absolute;
+    top: .8%;
+    left: 95%;
+
+    cursor: pointer;
+    font-size: 5rem;
+    color: red;
+  }
+
+  .left {
+    position: absolute;
+    top: 50%;
+    right: 70%;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    font-size: 5rem;
+    color: red;
+  }
+
+  .right {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translateY(-50%);
+
+    cursor: pointer;
+    font-size: 5rem;
+    color: red;
+  }
+}
+
+.block-of-more-references-popUpImg.hide {
+  display: none;
+}

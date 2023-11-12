@@ -2,36 +2,36 @@
 
 header {
   background: url("../../assets/images/headerBathroom.jpg") no-repeat center/cover fixed;
+  
   height: 80vh;
-  font-family: var(--title-text);
-
-  .header-general-title {
-    @include FlexJustifyItemCenter;
-    flex-direction: column;
-      -ms-flex-direction: column;
-      -moz-flex-direction: column;
-      -webkit-flex-direction: column;
-    height: 100%;
-
-    color: var(--general-bg-color);
-    text-transform: uppercase;
-    text-align: center;
-
-    h1 {
-      border-bottom: 1px solid var(--general-bg-color);
-    }
-
-    span {
-      padding: .3rem 0;
-      font-size: 1.1rem;
-    }
-  }
-
+  
   .overlay {
     background-color: var(--overlay-bg-color);
-
+    font-family: var(--title-text);
     height: 100%;
-    width: 100%;
+
+    .header-general-title {
+      @include FlexJustifyItemCenter;
+      flex-direction: column;
+        -ms-flex-direction: column;
+        -moz-flex-direction: column;
+        -webkit-flex-direction: column;
+        
+      height: 100%;
+
+      color: var(--general-bg-color);
+      text-transform: uppercase;
+      text-align: center;
+
+      h1 {
+        border-bottom: 1px solid var(--general-bg-color);
+      }
+
+      span {
+        padding: .3rem 0;
+        font-size: 1.1rem;
+      }
+    }
   }
 }
 

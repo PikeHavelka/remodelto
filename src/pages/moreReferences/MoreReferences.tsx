@@ -7,6 +7,7 @@ export const MoreReferences = () => {
   const [currentComponentIndex, setCurrentComponentIndex] = useState(0)
   const [imageBtn, setImageBtn] = useState(true)
   const [visibleComponents, setVisibleComponents] = useState<string[][]>([])
+  
   const ourReferenceRef = useRef(null)
 
   /* Store Assets from folders */
@@ -76,7 +77,7 @@ export const MoreReferences = () => {
   }, [])
 
 return (
-  <section className="more-references" id="nase-reference">
+  <section className="more-references">
     <article className="more-references-article container">
       <div className="more-references-title" ref={ourReferenceRef}>
         <h1>Naše reference</h1>

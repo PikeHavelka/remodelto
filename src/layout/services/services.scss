@@ -27,11 +27,13 @@
       display: -moz-box;
       display: -ms-flexbox;
       display: -webkit-flex;
+    justify-content: center;
     flex-wrap: wrap;
       -webkit-flex-wrap: wrap;
     
     gap: 1.5rem;
 
+    padding-inline: .5rem;
     @include clamp("padding-bottom", 3.5rem, 10vw, 10rem);
   }
 }

@@ -1,7 +1,8 @@
 @import "../../partials/mixins";
 
 .error-page {
-  margin: 0 auto;
+  margin-top: 10rem;
+  margin-inline: auto;
   padding-block: 5rem;
 
   .error-page-text-container {
