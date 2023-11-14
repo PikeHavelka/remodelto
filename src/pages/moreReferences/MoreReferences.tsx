@@ -19,27 +19,27 @@ export const MoreReferences = () => {
     return assets
   }
 
-  const referenceImages1 = importAll(require.context("../../assets/images/referencesImgs/1", false, /\.(png|jpe?g)$/))
+  const referenceImages1 = importAll(require.context("../../assets/images/references/series1", false, /\.(png|jpe?g)$/))
 
-  const referenceImages2 = importAll(require.context("../../assets/images/referencesImgs/2", false, /\.(png|jpe?g)$/))
+  const referenceImages2 = importAll(require.context("../../assets/images/references/series2", false, /\.(png|jpe?g)$/))
 
-  const referenceImages3 = importAll(require.context("../../assets/images/referencesImgs/3", false, /\.(png|jpe?g)$/))
+  const referenceImages3 = importAll(require.context("../../assets/images/references/series3", false, /\.(png|jpe?g)$/))
 
-  const referenceImages4 = importAll(require.context("../../assets/images/referencesImgs/4", false, /\.(png|jpe?g)$/))
+  const referenceImages4 = importAll(require.context("../../assets/images/references/series4", false, /\.(png|jpe?g)$/))
 
-  const referenceImages5 = importAll(require.context("../../assets/images/referencesImgs/5", false, /\.(png|jpe?g)$/))
+  const referenceImages5 = importAll(require.context("../../assets/images/references/series5", false, /\.(png|jpe?g)$/))
 
-  const referenceImages6 = importAll(require.context("../../assets/images/referencesImgs/6", false, /\.(png|jpe?g)$/))
+  const referenceImages6 = importAll(require.context("../../assets/images/references/series6", false, /\.(png|jpe?g)$/))
 
-  const referenceImages7 = importAll(require.context("../../assets/images/referencesImgs/7", false, /\.(png|jpe?g)$/))
+  const referenceImages7 = importAll(require.context("../../assets/images/references/series7", false, /\.(png|jpe?g)$/))
 
-  const referenceImages8 = importAll(require.context("../../assets/images/referencesImgs/8", false, /\.(png|jpe?g)$/))
+  const referenceImages8 = importAll(require.context("../../assets/images/references/series8", false, /\.(png|jpe?g)$/))
 
-  const referenceImages9 = importAll(require.context("../../assets/images/referencesImgs/9", false, /\.(png|jpe?g)$/))
+  const referenceImages9 = importAll(require.context("../../assets/images/references/series9", false, /\.(png|jpe?g)$/))
 
-  const referenceImages10 = importAll(require.context("../../assets/images/referencesImgs/10", false, /\.(png|jpe?g)$/))
+  const referenceImages10 = importAll(require.context("../../assets/images/references/series10", false, /\.(png|jpe?g)$/))
 
-  const referenceImages11 = importAll(require.context("../../assets/images/referencesImgs/11", false, /\.(png|jpe?g)$/))
+  const referenceImages11 = importAll(require.context("../../assets/images/references/series11", false, /\.(png|jpe?g)$/))
 
   const allReferenceImages: string[][] = [
     referenceImages1,

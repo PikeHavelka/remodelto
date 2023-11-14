@@ -1,13 +1,13 @@
 @import "../../partials/mixins";
 
 .section-bg {
-  background: url("../../assets/images/bathroomBackground.jpeg") no-repeat center/cover;
+  background: url("../../assets/images/bathroomBackground.jpg") no-repeat center/cover;
   background-position: center center;
   @include clamp("height", 15rem, 25vw, 25rem);
 }
 
 .section-bg2 {
-  background: url("../../assets/images/kitchenBackground.jpeg") no-repeat center/cover;
+  background: url("../../assets/images/kitchenBackground.jpg") no-repeat center/cover;
   background-position: center center;
   @include clamp("height", 15rem, 25vw, 25rem);
 }

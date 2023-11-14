@@ -29,7 +29,7 @@
 
     .about-us-img-container {
       padding: 1rem;
-      max-width: 80%;
+      min-width: 25rem;
 
       border: 5px solid black;
       border-style: groove;
@@ -45,6 +45,10 @@
         -ms-flex-direction: column;
         -moz-flex-direction: column;
         -webkit-flex-direction: column;
+
+        .about-us-img-container {
+          max-width: 25rem;
+        }
     }
   }
 }

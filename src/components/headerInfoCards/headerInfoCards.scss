@@ -22,7 +22,7 @@
 
     .header-card-company-logo {
       @include clamp("width", 5rem, 15vw, 7rem);
-
+      
       border-radius: 50%;
       margin-bottom: 1rem;
     }

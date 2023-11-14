@@ -1,5 +1,5 @@
 import "./contact.scss"
-import OtradovecJan from "../../assets/images/OtradovecJan.png"
+import OtradovecJan from "../../assets/images/OtradovecJan.jpg"
 import { PhoneIcon, EmailIcon, FacebookIcon } from "../../assets/svgIcons"
 
 export const Contact = () => {
