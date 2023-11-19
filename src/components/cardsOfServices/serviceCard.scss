@@ -7,8 +7,20 @@
   box-shadow: 1px 1px 10px var(--general-color);
   border-bottom: 10px solid var(--decoration-color);
 
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+
   .services-img-container {
     overflow: hidden;
+
 
      img {
       width: 100%;
@@ -29,5 +41,16 @@
       color: var(--general-color);
       text-decoration: underline;
     }
+  }
+
+  .services-text-link {
+    @include TitleTextH2;
+    
+    font-size: 1.2rem;
+    font-style: normal;
+    text-decoration: none;
+    
+    margin: auto 0 2rem 2rem;
+    width: fit-content;
   }
 }

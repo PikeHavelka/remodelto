@@ -1,0 +1,25 @@
+@import "../../partials/mixins";
+
+.construction-work-section {
+  @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+  @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+  .construction-work-title-text,
+  .construction-work-subtitle-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .construction-work-title {
+    @include TitleTextH1;
+    text-align: center;
+  }
+
+  .construction-work-subtitle {
+    @include TitleTextH3;
+  }
+
+  .construction-work-text {
+    @include NormalText;
+    margin-top: .2rem;
+  }
+}

@@ -21,16 +21,16 @@
   .flat-flex-wrapper,
   .house-flex-wrapper {
     display: flex;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     flex-direction: column;
-      -ms-flex-direction: column;
-      -moz-flex-direction: column;
-      -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
     justify-content: space-around;
-      -webkit-justify-content: space-around;
+    -webkit-justify-content: space-around;
 
     .flat-reconstruction-subtitle,
     .house-reconstruction-subtitle {
@@ -108,18 +108,147 @@
   }
 }
 
+// Reference Series
+@mixin ReferenceSeries {
+  .block-of-more-references,
+  .references-series3,
+  .references-series5,
+  .more-references-series1 {
+    margin-top: 5rem;
+
+    .block-of-more-references-introduction-container,
+    .references-series3-title-text-photo,
+    .references-series5-title-text-photo,
+    .more-references-series1-title-text-photo {
+      @include FlexJustifyItemCenter;
+      gap: 2rem;
+
+      padding: 1rem;
+      border-bottom: 5px solid var(--decoration-color);
+
+      .block-of-more-references-text-container,
+      .references-series3-title-text,
+      .references-series5-title-text,
+      .more-references-series1-title-text {
+
+        .block-of-more-references-subtitle,
+        .references-series3-subtitle,
+        .references-series5-subtitle,
+        .more-references-series1-subtitle {
+          @include TitleTextH3;
+
+          margin-bottom: .5rem;
+
+          h3 {
+            border-left: 5px solid var(--decoration-color);
+            padding-left: .5rem;
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+
+        .block-of-more-references-text,
+        .references-series3-text,
+        .references-series5-text,
+        .more-references-series1-text {
+          @include NormalText;
+          margin-top: 1.5rem;
+        }
+
+      }
+
+      .block-of-more-references-introduction-img,
+      .references-series3-introduction-photo,
+      .references-series5-introduction-photo,
+      .more-references-series1-introduction-photo {
+        @include clamp("max-width", 15rem, 65vw, 25rem);
+      }
+    }
+
+    .block-of-more-references-images-container,
+    .references-series3-img-container,
+    .references-series5-img-container,
+    .more-references-series1-img-container {
+      display: grid;
+      display: -ms-grid;
+      grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+      -ms-grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+      gap: .5rem;
+
+      padding: 1rem;
+
+      figure {
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+          transition: transform 250ms linear;
+          -webkit-transition: transform 250ms linear;
+          -moz-transition: transform 250ms linear;
+          -o-transition: transform 250ms linear;
+
+          &:hover {
+            transform: scale(1.2);
+            -webkit-transform: scale(1.2);
+            -moz-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            -o-transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+
+  .block-of-more-references,
+  .references-series3,
+  .references-series5 {
+
+    .references-series3-subtitle,
+    .references-series5-subtitle {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+
+  .block-of-more-references,
+  .references-series3,
+  .references-series5 {
+    text-align: center;
+    margin-top: 3rem !important;
+
+    .references-series3-subtitle,
+    .references-series5-subtitle {
+      font-size: 1rem !important;
+    }
+
+    .block-of-more-references-introduction-container,
+    .references-series3-title-text-photo,
+    .references-series5-title-text-photo {
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+    }
+  }
+}
+/********************************************/
+
 // Display flex center
 @mixin FlexJustifyItemCenter {
   display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   justify-content: center;
-    -ms-justify-content: center;
-    -webkit-justify-content: center;
+  -ms-justify-content: center;
+  -webkit-justify-content: center;
   align-items: center;
-    -webkit-align-items: center;
+  -webkit-align-items: center;
 }
 
 /********************************************/

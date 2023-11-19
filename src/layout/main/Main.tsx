@@ -1,11 +1,11 @@
 import { Services, AboutUs, References } from "../index"
-import { BackgroundDesign, BackgroundDesign2 } from "../../components/index"
+import { BackgroundDesign1, BackgroundDesign2 } from "../../components/index"
 
 export const Main = () => {
   return (
     <main>
       <AboutUs />
-      <BackgroundDesign />
+      <BackgroundDesign1 />
       <Services />
       <BackgroundDesign2 />
       <References />

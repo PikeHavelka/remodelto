@@ -1,5 +1,6 @@
 import "./serviceCard.scss"
 import { ServiceCards } from "../../types/allTypes"
+import { Link } from "react-router-dom"
 
 export const ServiceCard = (props: ServiceCards) => {
 
@@ -16,6 +17,8 @@ export const ServiceCard = (props: ServiceCards) => {
       <div className="services-text">
         {props.text}
       </div>
+
+      <Link to={props.page} className="services-text-link">{props.moreInfo}</Link>
     </div>
   )
 }

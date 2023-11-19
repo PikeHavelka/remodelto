@@ -1,0 +1,25 @@
+@import "../../partials/mixins";
+
+.renovation-section {
+  @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+  @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+  .renovation-title-text,
+  .renovation-subtitle-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .renovation-title {
+    @include TitleTextH1;
+    text-align: center;
+  }
+
+  .renovation-subtitle {
+    @include TitleTextH3;
+  }
+
+  .renovation-text {
+    @include NormalText;
+    margin-top: .2rem;
+  }
+}

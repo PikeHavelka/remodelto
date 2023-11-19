@@ -1,0 +1,25 @@
+@import "../../partials/mixins";
+
+.consultation-section {
+  @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+  @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+  .consultation-title-text,
+  .consultation-subtitle-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .consultation-title {
+    @include TitleTextH1;
+    text-align: center;
+  }
+
+  .consultation-subtitle {
+    @include TitleTextH3;
+  }
+
+  .consultation-text {
+    @include NormalText;
+    margin-top: .2rem;
+  }
+}

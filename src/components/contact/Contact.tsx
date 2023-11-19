@@ -1,6 +1,6 @@
 import "./contact.scss"
 import OtradovecJan from "../../assets/images/OtradovecJan.jpg"
-import { PhoneIcon, EmailIcon, FacebookIcon } from "../../assets/svgIcons"
+import { PhoneIcon, EmailIcon, FacebookIcon, InstagramIcon } from "../../assets/svgIcons"
 
 export const Contact = () => {
   return (
@@ -12,6 +12,10 @@ export const Contact = () => {
       </div>
 
       <div className="contact-section-contact">
+        <a href="https://www.instagram.com/remodelto_s.r.o/" aria-label="Odkaz na Instagram majitele firmy">
+          <InstagramIcon />
+        </a>
+
         <a href="https://www.facebook.com/RemodelTo" aria-label="Odkaz na Facebook majitele firmy">
           <FacebookIcon />
         </a>

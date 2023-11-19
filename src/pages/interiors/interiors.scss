@@ -1,0 +1,25 @@
+@import "../../partials/mixins";
+
+.interiors-section {
+  @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+  @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+  .interiors-section-title-text,
+  .interiors-section-subtitle-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .interiors-section-title {
+    @include TitleTextH1;
+    text-align: center;
+  }
+
+  .interiors-section-subtitle {
+    @include TitleTextH3;
+  }
+
+  .interiors-section-text {
+    @include NormalText;
+    margin-top: .2rem;
+  }
+}

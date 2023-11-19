@@ -22,7 +22,10 @@
 
     .more-references-text {
       @include NormalText;
-      margin-top: 3.5rem;
+    }
+
+    .more-references-series1 {
+      @include ReferenceSeries;
     }
 
     .more-references-show-more-btn {
@@ -38,7 +41,6 @@
       color: var(--general-bg-color);
 
       border: none;
-      border-radius: 5px;
       background-color: var(--button-color);
 
       &:hover {
