@@ -1,0 +1,54 @@
+@import "../../partials/mixins";
+
+.interest-section {
+  border-top: 10px solid var(--decoration-color);
+
+  .interest-article {
+    display: flex;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    align-items: center;
+    align-items: center;
+    -webkit-align-items: center;
+    gap: 2.5rem;
+
+    margin-top: 5rem;
+
+    .interest-subtitle {
+      @include TitleTextH2;
+      text-align: center;
+    }
+
+    .interest-text {
+      @include NormalText;
+    }
+
+    .interest-href-italic {
+      font-style: italic;
+      color: black;
+      text-decoration: underline;
+    }
+
+    img {
+      @include clamp("max-width", 20rem, 45vw, 29rem);
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .interest-section {
+
+    .interest-article {
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+}

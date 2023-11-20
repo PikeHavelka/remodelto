@@ -1,8 +1,8 @@
 export const FacebookIcon = () => {
   return (
     <svg
-      width="20"
-      height="20"
+      width="19"
+      height="19"
       viewBox="0 0 256 256"
       className="facebook-icon"
     >
@@ -32,7 +32,6 @@ export const FacebookIcon = () => {
           fillRule="nonzero"
           opacity="1"
           transform="matrix(1 0 0 1 0 0)"
-          stroke-linecap="round"
         />
       </g>
     </svg>

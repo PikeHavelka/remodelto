@@ -5,7 +5,7 @@ export const OpeningHours = () => {
     <section className="opening-hours-section">
       <div className="opening-hours-container">
         <div className="opening-hours-title">
-          <h2>Otevírací <br /> doba</h2>
+          <h2>Otevírací doba</h2>
         </div>
 
         <div className="opening-hours-text">
@@ -20,12 +20,12 @@ export const OpeningHours = () => {
           </div>
 
           <div className="opening-hours-time">
-            <span>8:00 až 21:00</span><br />
-            <span>8:00 až 21:00</span><br />
-            <span>8:00 až 21:00</span><br />
-            <span>8:00 až 21:00</span><br />
-            <span>8:00 až 21:00</span><br />
-            <span>8:00 až 21:00</span><br />
+            <span>8:00 až 17:00</span><br />
+            <span>8:00 až 17:00</span><br />
+            <span>8:00 až 17:00</span><br />
+            <span>8:00 až 17:00</span><br />
+            <span>8:00 až 17:00</span><br />
+            <span>8:00 až 17:00</span><br />
             <span>zavřeno</span>
           </div>
         </div>

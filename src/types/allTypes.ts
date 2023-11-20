@@ -2,7 +2,9 @@ export type ServiceCards = {
   id: number,
   image: string,
   title: string,
-  text: React.ReactNode | string
+  text: React.ReactNode | string,
+  moreInfo: string,
+  page: string
 }
 
 export type BlockOfMoreReferences = {
@@ -13,8 +15,7 @@ export type BlockOfMoreReferences = {
 }
 
 export type MoreReferencesWithImages = {
-  blockOfMoreReferencesData: BlockOfMoreReferences,
-  referenceImages: string[]
+  blockOfMoreReferencesData: BlockOfMoreReferences
 }
 
 export type ReferenceImages = {

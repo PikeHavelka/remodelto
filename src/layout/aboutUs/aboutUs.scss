@@ -25,11 +25,30 @@
       .about-us-span-italic {
         font-style: italic;
       }
+
+      .about-us-btn-contact {
+        @include TitleTextH3;
+        display: inline-block;
+
+        padding: .5rem 1rem;
+        margin: 2rem 0;
+  
+        color: var(--general-bg-color);
+        border: none;
+        background-color: var(--decoration-color);
+  
+        cursor: pointer;
+        text-transform: uppercase;
+  
+        &:hover {
+          background-color: var(--secondary-hover-color);
+        }
+      }
     }
 
     .about-us-img-container {
       padding: 1rem;
-      min-width: 25rem;
+      @include clamp("max-width", 15rem, 55vw, 25rem);
 
       border: 5px solid black;
       border-style: groove;
@@ -47,7 +66,7 @@
         -webkit-flex-direction: column;
 
         .about-us-img-container {
-          max-width: 25rem;
+          @include clamp("width", 10rem, 80vw, 25rem);
         }
     }
   }

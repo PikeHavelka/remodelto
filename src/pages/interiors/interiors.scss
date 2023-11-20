@@ -1,0 +1,36 @@
+@import "../../partials/mixins";
+
+.interiors-section {
+  @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+  @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+  .interiors-title-text,
+  .interiors-subtitle-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .interiors-title {
+    @include TitleTextH1;
+    @include clamp("font-size", .9rem, 6vw, 1.5rem);
+    text-align: center;
+  }
+
+  .interiors-subtitle {
+    @include TitleTextH3;
+  }
+
+  .interiors-text {
+    @include NormalText;
+    margin-top: .2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .interiors-section {
+    .interiors-title-text {
+      .interiors-text {
+        text-align: center;
+      }
+    }
+  }
+}

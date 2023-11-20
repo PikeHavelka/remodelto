@@ -1,0 +1,36 @@
+@import "../../partials/mixins";
+
+.construction-of-building-section {
+  @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+  @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+  .construction-of-building-title-text,
+  .construction-of-building-subtitle-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .construction-of-building-title {
+    @include TitleTextH1;
+    @include clamp("font-size", .9rem, 6vw, 1.5rem);
+    text-align: center;
+  }
+
+  .construction-of-building-subtitle {
+    @include TitleTextH3;
+  }
+
+  .construction-of-building-text {
+    @include NormalText;
+    margin-top: .2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .construction-of-building-section {
+    .construction-of-building-title-text {
+      .construction-of-building-text {
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,6 +1,7 @@
 import "./references.scss"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import { ReferenceSeries3, ReferenceSeries5} from "../../components/"
 
 export const References = () => {
   const [index, setIndex] = useState(0)
@@ -30,52 +31,65 @@ export const References = () => {
   return (
     <section className="references" id="reference">
       <article className="references-article container-second">
-        <div className="references-title-text-top">
-          <div className="references-subtitle">
-            <h2>Reference</h2>
-          </div>
-
-          <div className="references-text">
-            <p>
-              Jsme hrdí na naši dlouholetou tradici a zkušenosti v oblasti <strong>stavebnictví</strong>. Naše firma se specializuje na <strong>kvalitní</strong> a <strong>spolehlivou stavební práci</strong>, a to jak v oblasti <strong>bytového</strong>, tak <strong>komerčního stavebnictví</strong>.
-            </p>
-
-            <br />
-
-            <p>
-              Reference našich <strong>stavebních projektů</strong> jsou důkazem našeho <strong>závazku</strong> k <strong>excelenci</strong>.
-            </p>
-
-            <br />
-
-            <p>
-              Náš tým zahrnuje <strong>zkušené stavební inženýry, architekty</strong> a <strong>řemeslníky</strong>. Sledujeme nejnovější trendy v <strong>oblasti stavebnictví</strong> a neustále se vzděláváme, abychom našim klientům poskytli ty <strong>nejlepší stavební řešení</strong>.
-            </p>
-
-            <br />
-
-            <p>
-              Pokud máte zájem o spolupráci na vašem projektu, nebo máte další otázky ohledně našich služeb, neváhejte nás <a className="references-text-href-italic" href="#kontakt">kontaktovat</a>.
-            </p>
-          </div>
-        </div>
-
-        <div className="references-img-slider">
-          {sliderImges.map((oneImg, indexImg) => {
-
-            let slideNameClass = "next-slide"
-
-            if (indexImg === index) slideNameClass = "active-slide"
-
-            if (indexImg === index - 1 || (index === 0 && indexImg === sliderImges.length - 1)) slideNameClass = "last-slide"
-
-            return <div className={slideNameClass} key={indexImg}>
-              <img src={oneImg} alt="prehled rekonstrukcí" />
+        <div className="reference-article-slider-container">
+          <div className="references-title-text-top">
+            <div className="references-subtitle">
+              <h2>Reference</h2>
             </div>
-          })}
+
+            <div className="references-text">
+              <p>
+                Jsme hrdí na naši dlouholetou tradici a zkušenosti v oblasti <strong>stavebnictví</strong>. Naše firma se specializuje na <strong>kvalitní</strong> a <strong>spolehlivou stavební práci</strong>, a to jak v oblasti <strong>bytového</strong>, tak <strong>komerčního stavebnictví</strong>.
+              </p>
+
+              <br />
+
+              <p>
+                Reference našich <strong>stavebních projektů</strong> jsou důkazem našeho <strong>závazku</strong> k <strong>excelenci</strong>.
+              </p>
+
+              <br />
+
+              <p>
+                Pokud máte zájem o spolupráci na vašem projektu, nebo máte další otázky ohledně našich služeb, neváhejte nás <a className="references-text-href-italic" href="#kontakt">kontaktovat</a>.
+              </p>
+
+              <br />
+
+              <p className="reference--text-moto-italic">
+                "Společně budujeme vaše sny kvalitním řemeslem a péčí."
+              </p>
+
+              <br />
+
+              <p className="reference--text-moto-italic">
+                "Vy sníte, my stavíme."
+              </p>
+
+            </div>
+          </div>
+
+          <div className="references-img-slider">
+            {sliderImges.map((oneImg, indexImg) => {
+
+              let slideNameClass = "next-slide"
+
+              if (indexImg === index) slideNameClass = "active-slide"
+
+              if (indexImg === index - 1 || (index === 0 && indexImg === sliderImges.length - 1)) slideNameClass = "last-slide"
+
+              return <div className={slideNameClass} key={indexImg}>
+                <img src={oneImg} alt="přehled rekonstrukcí" />
+              </div>
+            })}
+          </div>
         </div>
 
-        <Link to="nase-reference" className="references-btn">Naše reference</Link>
+        <ReferenceSeries3 />
+
+        <ReferenceSeries5 />
+
+        <Link to="dalsi-reference" className="references-btn">Další reference</Link>
       </article>
     </section >
   )

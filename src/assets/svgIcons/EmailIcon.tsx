@@ -1,8 +1,8 @@
 export const EmailIcon = () => {
   return (
     <svg
-      width="20"
-      height="20"
+      width="19"
+      height="19"
       viewBox="0 0 256 256"
       className="email-icon"
     >
@@ -31,7 +31,6 @@ export const EmailIcon = () => {
           fillRule="nonzero"
           opacity="1"
           transform=" matrix(1 0 0 1 0 0)"
-          stroke-linecap="round"
         />
 
         <path d="M 47.405 60.019 c -0.712 0.536 -1.559 0.804 -2.405 0.804 s -1.693 -0.268 -2.405 -0.804 L 0 27.958 v 46.064 c 0 2.03 1.646 3.676 3.676 3.676 h 82.648 c 2.03 0 3.676 -1.646 3.676 -3.676 V 27.958 L 47.405 60.019 z"
@@ -45,7 +44,6 @@ export const EmailIcon = () => {
           fillRule="nonzero"
           opacity="1"
           transform=" matrix(1 0 0 1 0 0)"
-          stroke-linecap="round"
         />
       </g>
     </svg>

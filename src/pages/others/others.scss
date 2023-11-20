@@ -1,0 +1,36 @@
+@import "../../partials/mixins";
+
+.others-section {
+  @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+  @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+  .others-title-text,
+  .others-subtitle-text {
+    margin-bottom: 2.5rem;
+  }
+
+  .others-title {
+    @include TitleTextH1;
+    @include clamp("font-size", .9rem, 6vw, 1.5rem);
+    text-align: center;
+  }
+
+  .others-subtitle {
+    @include TitleTextH3;
+  }
+
+  .others-text {
+    @include NormalText;
+    margin-top: .2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .others-section {
+    .others-title-text {
+      .others-text {
+        text-align: center;
+      }
+    }
+  }
+}
