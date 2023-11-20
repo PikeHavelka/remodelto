@@ -1,5 +1,7 @@
+import { Interest } from "../../components"
 import "./constructionOfBuilding.scss"
 import { useEffect, useRef } from "react"
+import { Helmet } from "react-helmet-async"
 
 export const ConstructionOfBuilding = () => {
   const constructionOfBuilding = useRef(null)
@@ -12,12 +14,18 @@ export const ConstructionOfBuilding = () => {
     return () => {
       if(buildingCurrent) buildingCurrent.scrollIntoView(false)
     }
-  }, [])
+  })
 
   return (
-    <section className="construction-of-building-section container" ref={constructionOfBuilding}>
+    <section className="construction-of-building-section container">
       <div className="construction-of-building-title-text">
-        <div className="construction-of-building-title">
+
+        <Helmet>
+          <title>Výstavba budov | RemodelTO</title>
+          <meta name="description" content="Pomáháme vám s návrhem a realizací nových budov, ať už jde o bytové jednotky, komerční prostory nebo jiné projekty. Spolehněte se na naši expertizu a profesionalitu." />
+        </Helmet>
+
+        <div className="construction-of-building-title" ref={constructionOfBuilding}>
           <h1>Tvoříme místa, kde se život usazuje</h1>
         </div>
 
@@ -83,6 +91,8 @@ export const ConstructionOfBuilding = () => {
           </p>
         </div>
       </div>
+
+      <Interest />
     </section>
   )
 }

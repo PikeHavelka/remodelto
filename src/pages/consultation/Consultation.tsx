@@ -1,5 +1,7 @@
+import { Interest } from "../../components"
 import "./consultation.scss"
 import { useEffect, useRef } from "react"
+import { Helmet } from "react-helmet-async"
 
 export const Consultation = () => {
   const consultationRef = useRef(null)
@@ -17,6 +19,12 @@ export const Consultation = () => {
   return (
     <section className="consultation-section container" ref={consultationRef}>
       <div className="consultation-title-text">
+
+        <Helmet>
+          <title>Konzultace | RemodelTO</title>
+          <meta name="description" content="Máte nápad, ale nevíte, jak ho uskutečnit? Naši odborníci jsou tu, aby vám pomohli s plánováním a realizací vašeho projektu" />
+        </Helmet>
+
         <div className="consultation-title">
           <h1>Cesta k společnému vizionářství</h1>
         </div>
@@ -83,6 +91,8 @@ export const Consultation = () => {
           </p>
         </div>
       </div>
+
+      <Interest />
     </section>
   )
 }

@@ -11,6 +11,7 @@
 
   .construction-work-title {
     @include TitleTextH1;
+    @include clamp("font-size", .9rem, 6vw, 1.5rem);
     text-align: center;
   }
 
@@ -21,5 +22,15 @@
   .construction-work-text {
     @include NormalText;
     margin-top: .2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .construction-work-section {
+    .construction-work-title-text {
+      .construction-work-text {
+        text-align: center;
+      }
+    }
   }
 }

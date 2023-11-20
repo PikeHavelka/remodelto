@@ -48,7 +48,7 @@
 
     .about-us-img-container {
       padding: 1rem;
-      @include clamp("max-width", 10rem, 55vw, 25rem);
+      @include clamp("max-width", 15rem, 55vw, 25rem);
 
       border: 5px solid black;
       border-style: groove;

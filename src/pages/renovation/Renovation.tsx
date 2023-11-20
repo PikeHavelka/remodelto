@@ -1,5 +1,7 @@
+import { Interest } from "../../components"
 import "./renovation.scss"
 import { useRef, useEffect } from "react"
+import { Helmet } from "react-helmet-async"
 
 export const Renovation = () => {
   const renovationRef = useRef(null)
@@ -14,11 +16,17 @@ export const Renovation = () => {
       if (renovationCurrent) renovationCurrent.scrollIntoView(false)
     }
   })
-  
+
   return (
-    <section className="renovation-section container" ref={renovationRef}>
+    <section className="renovation-section container">
       <div className="renovation-title-text">
-        <div className="renovation-title">
+
+        <Helmet>
+          <title>Renovace | RemodelTO</title>
+          <meta name="description" content="Naše dovednosti a zkušenosti jsou vám k dispozici. Pokud máte starou nebo opotřebovanou budovu, neváhejte se na nás obrátit. Naše služby zahrnují kompletní renovaci, modernizaci a zvýšení energetické účinnosti vaší nemovitosti." />
+        </Helmet>
+
+        <div className="renovation-title" ref={renovationRef}>
           <h1>Obnova a oživení prostorů s historií</h1>
         </div>
 
@@ -84,6 +92,8 @@ export const Renovation = () => {
           </p>
         </div>
       </div>
+
+      <Interest />
     </section>
   )
 }

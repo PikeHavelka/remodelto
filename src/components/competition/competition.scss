@@ -1,0 +1,33 @@
+@import "../../partials/mixins";
+
+.competition-section {
+
+  .competition-article {
+    margin-top: 5rem;
+
+    .competition-subtitle {
+      @include TitleTextH2;
+      @include clamp("font-size", .9rem, 6vw, 1.5rem);
+      text-align: center;
+    }
+
+    .competition-text {
+      @include NormalText;
+
+      .competition-href-italic {
+        font-style: italic;
+        color: black;
+        text-decoration: underline;
+      }
+    }
+
+    .competition-container-img {
+      overflow: hidden;
+      
+      img {
+        max-width: 125%;
+        margin-top: 5rem;
+      }
+    }
+  }
+}

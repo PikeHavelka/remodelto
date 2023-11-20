@@ -1,5 +1,7 @@
 import "./others.scss"
+import { Interest } from "../../components"
 import { useRef, useEffect } from "react"
+import { Helmet } from "react-helmet-async"
 
 export const Others = () => {
   const othersRef = useRef(null)
@@ -15,9 +17,15 @@ export const Others = () => {
   })
 
   return (
-    <section className="others-section container" ref={othersRef}>
+    <section className="others-section container">
       <div className="others-title-text">
-        <div className="others-title">
+
+        <Helmet>
+          <title>Ostatní | RemodelTO</title>
+          <meta name="description" content="Máte speciální požadavek a nevíte, jak ho uskutečnit? Neváhejte nás kontaktovat. Uděláme vše proto abychom vám vyšli vstříc" />
+        </Helmet>
+
+        <div className="others-title" ref={othersRef}>
           <h1>Kreativita a flexibilita pro Každý projekt</h1>
         </div>
 
@@ -83,6 +91,8 @@ export const Others = () => {
           </p>
         </div>
       </div>
+
+      <Interest />
     </section>
   )
 }

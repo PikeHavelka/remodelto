@@ -11,6 +11,7 @@
 
   .construction-of-building-title {
     @include TitleTextH1;
+    @include clamp("font-size", .9rem, 6vw, 1.5rem);
     text-align: center;
   }
 
@@ -21,5 +22,15 @@
   .construction-of-building-text {
     @include NormalText;
     margin-top: .2rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .construction-of-building-section {
+    .construction-of-building-title-text {
+      .construction-of-building-text {
+        text-align: center;
+      }
+    }
   }
 }

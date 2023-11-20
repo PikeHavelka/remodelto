@@ -14,16 +14,16 @@ export const ReferenceSeries3 = () => {
   const dataReferenceSeries3 = importAll(require.context("../../assets/images/references/series3", false, /\.(png|jpe?g)$/))
 
   return (
-    <section className="references-series3">
-      <div className="references-series3-title-text-photo">
-        <div className="references-series3-title-text">
-          <div className="references-series3-subtitle">
+    <section className="references-series">
+      <div className="references-series-title-text-photo">
+        <div className="references-series-title-text">
+          <div className="references-series-subtitle">
             <h2>Renovace rodinného domku s terasou</h2>
             <h3>Reference</h3>
           </div>
 
 
-          <div className="references-series3-text">
+          <div className="references-series-text">
             <p>
               Kompletní rekonstrukce interiéru rodinného domu se vším všudy. Práce zahrnovaly výměnu kabeláže, modernizaci topení, instalaci nových sanitárních zařízení a spoustu dalších. Stará a zastaralá infrastruktura ustoupila inovativním systémům, zajišťujícím nejen efektivitu, ale i bezpečnost.
             </p>
@@ -31,13 +31,13 @@ export const ReferenceSeries3 = () => {
         </div>
 
         <img 
-          className="references-series3-introduction-photo"
+          className="references-series-introduction-photo"
           src={SeriesIntroductionPhoto3}
           alt="rekonstrukce"
         />
       </div>
 
-      <div className="references-series3-img-container">
+      <div className="references-series-img-container">
         {dataReferenceSeries3.map((oneImage, index) => {
 
           return <figure key={index}>

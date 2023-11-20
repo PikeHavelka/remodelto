@@ -25,7 +25,7 @@
       @include NormalText;
     }
 
-    .interest-article-href-italic {
+    .interest-href-italic {
       font-style: italic;
       color: black;
       text-decoration: underline;
@@ -33,56 +33,6 @@
 
     img {
       @include clamp("max-width", 20rem, 45vw, 29rem);
-
-      transition: all 250ms linear;
-      -webkit-transition: transform all 250ms linear;
-      -moz-transition: transform all 250ms linear;
-      -o-transition: transform all 250ms linear;
-
-      &:hover {
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-      }
-    }
-  }
-
-  .interest-article2 {
-    margin-top: 5rem;
-
-    .interest-subtitle2 {
-      @include TitleTextH2;
-      text-align: center;
-    }
-
-    .interest-text2 {
-      @include NormalText;
-
-      .interest-article-href-italic2 {
-        font-style: italic;
-        color: black;
-        text-decoration: underline;
-      }
-    }
-
-    img {
-      max-width: 100%;
-      margin-top: 5rem;
-
-      transition: all 250ms linear;
-      -webkit-transition: transform all 250ms linear;
-      -moz-transition: transform all 250ms linear;
-      -o-transition: transform all 250ms linear;
-
-      &:hover {
-        transform: scale(1.1);
-        -webkit-transform: scale(1.1);
-        -moz-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        -o-transform: scale(1.1);
-      }
     }
   }
 }
