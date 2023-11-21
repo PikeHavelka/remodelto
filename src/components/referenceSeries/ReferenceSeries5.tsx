@@ -1,5 +1,5 @@
 import "./referenceSeries.scss"
-import SeriesIntroductionPhoto5 from "../../assets/images/references/SeriesIntroductions/SeriesIntroduction5.jpg"
+import SeriesIntroductionPhoto5 from "../../assets/images/references/SeriesIntroduction5.jpg"
 
 export const ReferenceSeries5 = () => {
   /* Store Assets from folders */

@@ -17,7 +17,7 @@ export const Consultation = () => {
   })
 
   return (
-    <section className="consultation-section container" ref={consultationRef}>
+    <section className="consultation-section container">
       <div className="consultation-title-text">
 
         <Helmet>
@@ -25,7 +25,7 @@ export const Consultation = () => {
           <meta name="description" content="Máte nápad, ale nevíte, jak ho uskutečnit? Naši odborníci jsou tu, aby vám pomohli s plánováním a realizací vašeho projektu" />
         </Helmet>
 
-        <div className="consultation-title">
+        <div className="consultation-title" ref={consultationRef}>
           <h1>Cesta k společnému vizionářství</h1>
         </div>
 

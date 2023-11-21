@@ -1,5 +1,5 @@
 import "./aboutUs.scss"
-import aboutUsKitchenInterior from "../../assets/images/aboutUsKitchenInterior.jpg"
+import aboutUsKitchenInterior from "../../assets/images/aboutUs/aboutUsKitchenInterior.jpg"
 
 export const AboutUs = () => {
   return (

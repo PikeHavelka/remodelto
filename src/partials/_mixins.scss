@@ -111,12 +111,19 @@
 
 // Reference Series & More Reference
 @mixin ReferenceSeries {
+
+  .reference-series-block-series {
+    border-top: 5px solid var(--decoration-color);
+  }
+  
   .references-series,
-  .more-references-series {
+  .more-references-series,
+  .reference-series-block-series {
     margin-top: 5rem;
 
     .references-series-title-text-photo,
-    .more-references-series-title-text-photo {
+    .more-references-series-title-text-photo,
+    .reference-series-block-title-text-photo {
       @include FlexJustifyItemCenter;
       gap: 2rem;
 
@@ -124,10 +131,12 @@
       border-bottom: 5px solid var(--decoration-color);
 
       .references-series-title-text,
-      .more-references-series-title-text {
+      .more-references-series-title-text,
+      .reference-series-block-title-text {
 
         .references-series-subtitle,
-        .more-references-series-subtitle {
+        .more-references-series-subtitle,
+        .reference-series-block-subtitle {
           @include TitleTextH3;
 
           margin-bottom: .5rem;
@@ -140,20 +149,23 @@
         }
 
         .references-series-text,
-        .more-references-series-text {
+        .more-references-series-text,
+        .reference-series-block-text {
           @include NormalText;
           margin-top: 1.5rem;
         }
       }
 
       .references-series-introduction-photo,
-      .more-references-series-introduction-photo {
+      .more-references-series-introduction-photo,
+      .reference-series-block-introduction-photo {
         @include clamp("max-width", 15rem, 65vw, 25rem);
       }
     }
 
     .references-series-img-container,
-    .more-references-series-img-container {
+    .more-references-series-img-container,
+    .reference-series-block-img-container {
       display: grid;
       display: -ms-grid;
       grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));

@@ -1,16 +1,15 @@
 import "./moreReferences.scss"
-import { FlatReconstruction, HouseReconstruction } from "../../components"
+import { FlatReconstruction, HouseReconstruction, ReferenceSeriesBlock } from "../../components"
 import { useEffect, useRef, useState } from "react"
-import { image1Introduction } from "../../assets/images/references"
+import image1Introduction from "../../assets/images/references/SeriesIntroduction1.jpg"
 import { Helmet } from "react-helmet-async"
 
 export const MoreReferences = () => {
   const ourReferenceRef = useRef(null)
+  const [currentSeries, setCurrentSeries] = useState<string[]>([])
   const [index, setIndex] = useState(0)
-
-  const handlerClick = () => {
-    setIndex(index + 1)
-  }
+  const [show, setShow] = useState(false)
+  const [btnReferences, setBtnReferences] = useState(true)
 
   /* Store Assets from folders */
   function importAll(r: any): string[] {
@@ -34,6 +33,16 @@ export const MoreReferences = () => {
 
   const allSeries = [series2, series4, series6, series7, series8, series9, series10, series11]
 
+  const showMoreImages = () => {
+    if (show === false) setShow(!show)
+
+    if (index <= allSeries.length - 1) {
+      setIndex(index + 1)
+      setCurrentSeries([...currentSeries, ...allSeries[index]])
+      if(index === allSeries.length - 1) setBtnReferences(false)
+    }
+  }
+
   // Scroll to "<h1>Naše reference</h1>" when click on MoreReferences btn
   useEffect(() => {
     const refCurrent = ourReferenceRef.current as HTMLDivElement | null
@@ -43,7 +52,7 @@ export const MoreReferences = () => {
     return () => {
       if (refCurrent) refCurrent.scrollIntoView(false)
     }
-  })
+  }, [])
 
   return (
     <section className="more-references">
@@ -80,14 +89,13 @@ export const MoreReferences = () => {
           <div className="more-references-series-title-text-photo">
             <div className="more-references-series-title-text">
               <div className="more-references-series-subtitle">
-                <h2>Renovace rodinného domku s terasou</h2>
+                <h2>Renovace malého a útulného bytu</h2>
                 <h3>Reference</h3>
               </div>
 
-
               <div className="more-references-series-text">
                 <p>
-                  Kompletní rekonstrukce interiéru rodinného domu se vším všudy. Práce zahrnovaly výměnu kabeláže, modernizaci topení, instalaci nových sanitárních zařízení a spoustu dalších. Stará a zastaralá infrastruktura ustoupila inovativním systémům, zajišťujícím nejen efektivitu, ale i bezpečnost.
+                  Tento malý a velmi zajímavý byt prošel rekonstrukcí, která zahrnovala renovaci každého pokoje, výměnu podlah a nový nátěr stěn. Tím se podařilo vytvořit moderní a útulný prostor v malých rozměrech.
                 </p>
               </div>
             </div>
@@ -100,7 +108,7 @@ export const MoreReferences = () => {
           </div>
 
           <div className="more-references-series-img-container">
-            {series1.map((oneImage, index) => {
+            {series1.map((oneImage: string, index: number) => {
 
               return <figure key={index}>
                 <img
@@ -112,12 +120,16 @@ export const MoreReferences = () => {
           </div>
         </section>
 
-        <button className="more-references-show-more-btn" onClick={handlerClick}>další reference</button>
+        <section className={`reference-series-block-series ${show ? "show" : "hide"}`}>
+          <ReferenceSeriesBlock currentSeries={currentSeries} />
+        </section>
+
+        <button className={`${btnReferences ? "more-references-show-more-btn" : "more-references-dont-work-btn"}`} onClick={showMoreImages}>další reference</button>
       </article>
 
       <HouseReconstruction />
       <FlatReconstruction />
-    </section>
+    </section >
   )
 }
 

@@ -48,21 +48,30 @@
       }
     }
 
-    // .more-references-dont-work-btn {
-    //   display: block;
+    .more-references-dont-work-btn {
+      display: block;
 
-    //   padding: .5rem 1rem;
-    //   margin-top: 5rem;
+      padding: .5rem 1rem;
+      margin-top: 5rem;
 
-    //   width: 100%;
-    //   cursor: default;
+      width: 100%;
+      cursor: default;
 
-    //   @include TitleTextH3;
-    //   color: var(--general-bg-color);
+      @include TitleTextH3;
+      color: var(--general-bg-color);
 
-    //   border: none;
-    //   border-radius: 5px;
-    //   background-color: var(--btn-dont-work);
-    // }
+      border: none;
+      border-radius: 5px;
+      background-color: var(--btn-dont-work);
+    }
+  }
+
+  .show {
+    display: block;
+
+  }
+
+  .hide {
+    display: none;
   }
 }

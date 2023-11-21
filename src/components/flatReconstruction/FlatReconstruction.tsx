@@ -1,5 +1,5 @@
 import "./flatReconstruction.scss"
-import constructionDrawing from "../../assets/images/constructionDrawing.jpg"
+import constructionDrawing from "../../assets/images/references/constructionDrawing.jpg"
 import { useRef, useEffect, useState } from "react"
 
 export const FlatReconstruction = () => {

@@ -1,5 +1,5 @@
 import "./houseReconstruction.scss"
-import constructionDrawing from "../../assets/images/constructionDrawing2.jpg"
+import constructionDrawing from "../../assets/images/references/constructionDrawing2.jpg"
 import { useRef, useEffect, useState } from "react"
 
 export const HouseReconstruction = () => {
