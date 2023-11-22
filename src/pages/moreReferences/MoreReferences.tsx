@@ -124,7 +124,7 @@ export const MoreReferences = () => {
           <ReferenceSeriesBlock currentSeries={currentSeries} />
         </section>
 
-        <button className={`${btnReferences ? "more-references-show-more-btn" : "more-references-dont-work-btn"}`} onClick={showMoreImages}>další reference</button>
+        <button className={`${btnReferences ? "more-references-show-more-btn" : "more-references-dont-work-btn"}`} onClick={showMoreImages}>další obrázky</button>
       </article>
 
       <HouseReconstruction />
