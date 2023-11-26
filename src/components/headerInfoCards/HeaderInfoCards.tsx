@@ -1,6 +1,6 @@
 import "./headerInfoCards.scss"
 import logo from "../../assets/images/remodelToLogo.jpg"
-import { FlatIcon, HouseIcon } from "../../assets/svgIcons/index"
+import { HouseIcon, FlatIcon } from "../../assets/svgIcons/"
 
 export const HeaderInfoCards = () => {
   return (

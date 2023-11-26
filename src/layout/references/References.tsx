@@ -1,7 +1,7 @@
 import "./references.scss"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { ReferenceSeries3, ReferenceSeries5} from "../../components/"
+import { ReferenceSeries3, ReferenceSeries5 } from "../../components/"
 
 export const References = () => {
   const [index, setIndex] = useState(0)

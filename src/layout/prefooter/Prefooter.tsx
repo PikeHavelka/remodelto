@@ -3,7 +3,7 @@ import "./prefooter.scss"
 
 export const Prefooter = () => {
   return (
-    <section className="prefooter-section" id="kontakt">
+    <section className="prefooter-section">
       <div className="prefooter-contact-services-opening-hours container">
         <Contact />
         <AllServices />

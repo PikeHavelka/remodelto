@@ -1,0 +1,33 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--general-bg-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 2.5rem;
+
+  max-width: 1050px;
+}
+
+.container-second {
+  margin: 0 auto;
+  padding: 0 .5rem;
+
+  max-width: 1250px;
+}

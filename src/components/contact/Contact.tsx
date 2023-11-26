@@ -4,7 +4,7 @@ import { PhoneIcon, EmailIcon, FacebookIcon, InstagramIcon } from "../../assets/
 
 export const Contact = () => {
   return (
-    <section className="contact-section">
+    <section className="contact-section" id="kontakt">
       <div className="contact-section-company-owner">
         <img src={OtradovecJan} alt="majitel firmy" />
         <p>Jan Otradovec</p>
@@ -23,7 +23,7 @@ export const Contact = () => {
         <a href="mailto:Homerekojo@gmail.com" aria-label="Odkaz na email majitele firmy">
           <EmailIcon />
         </a>
-        
+
         <a href="tel:606 167 019" aria-label="Telefonní číslo na majítele firmy">
           <PhoneIcon />
         </a>

@@ -3,7 +3,7 @@
 .navbar-main {
   position: fixed;
   min-width: 100%;
-
+  
   font-weight: 500;
   font-family: var(--title-text);
   letter-spacing: 1.5px;
@@ -28,13 +28,11 @@
 
   .navbar-logo {
     padding: .1rem 0;
-    font-size: .8rem;
+    font-size: .85rem;
 
     .logo-remodel {
       display: block;
-
       text-align: center;
-      font-size: .9rem;
 
       color: var(--general-color);
       border-bottom: 1px solid var(--decoration-color);

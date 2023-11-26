@@ -1,3 +1,4 @@
+import "./app.css"
 import { Main } from "./layout/index"
 import { Routes, Route } from "react-router-dom"
 import { SharedLayout, ErrorPage, MoreReferences, ConstructionOfBuilding, ConstructionWork, Consultation, Interiors, Others, Renovation } from "./pages/index"
