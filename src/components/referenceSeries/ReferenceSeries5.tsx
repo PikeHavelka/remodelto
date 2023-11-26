@@ -1,5 +1,7 @@
 import "./referenceSeries.scss"
 import SeriesIntroductionPhoto5 from "../../assets/images/references/SeriesIntroduction5.jpg"
+import { LazyLoadImage } from "react-lazy-load-image-component"
+import remodelToPlaceHolder from "../../assets/images/remodelToPlaceHolder.jpg"
 
 export const ReferenceSeries5 = () => {
   /* Store Assets from folders */
@@ -29,10 +31,12 @@ export const ReferenceSeries5 = () => {
           </div>
         </div>
 
-        <img 
+        <LazyLoadImage
           className="references-series-introduction-photo"
           src={SeriesIntroductionPhoto5}
           alt="rekonstrukce"
+          effect="blur"
+          placeholderSrc={remodelToPlaceHolder}
         />
       </div>
 
@@ -40,9 +44,11 @@ export const ReferenceSeries5 = () => {
         {dataReferenceSeries5.map((oneImage, index) => {
 
           return <figure key={index}>
-            <img
+            <LazyLoadImage
               src={oneImage}
               alt="rekonstrukce"
+              effect="blur"
+              placeholderSrc={remodelToPlaceHolder}
             />
           </figure>
         })}
