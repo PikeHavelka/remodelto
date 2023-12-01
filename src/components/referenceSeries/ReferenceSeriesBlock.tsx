@@ -11,8 +11,9 @@ export const ReferenceSeriesBlock = (props: ReferenceSeriesOneBlock) => {
         return <figure key={index}>
           <LazyLoadImage
             src={oneImage}
+            // height={245}
+            // width={195}
             alt="rekonstrukce"
-            effect="blur"
             placeholderSrc={remodelToPlaceHolder}
           />
         </figure>

@@ -35,7 +35,6 @@ export const ReferenceSeries5 = () => {
           className="references-series-introduction-photo"
           src={SeriesIntroductionPhoto5}
           alt="rekonstrukce"
-          effect="blur"
           placeholderSrc={remodelToPlaceHolder}
         />
       </div>
@@ -47,7 +46,6 @@ export const ReferenceSeries5 = () => {
             <LazyLoadImage
               src={oneImage}
               alt="rekonstrukce"
-              effect="blur"
               placeholderSrc={remodelToPlaceHolder}
             />
           </figure>

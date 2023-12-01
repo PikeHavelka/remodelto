@@ -14,7 +14,7 @@
       .about-us-subtitle {
         @include TitleTextH2;
         margin-bottom: 1rem;
-        
+
         color: var(--secondary-color);
       }
 
@@ -28,19 +28,18 @@
 
       .about-us-btn-contact {
         @include TitleTextH3;
-        // font-family: "Poppins Regular";
         display: inline-block;
 
         padding: .5rem 1rem;
         margin: 2rem 0;
-  
+
         color: var(--general-bg-color);
         border: none;
         background-color: var(--decoration-color);
-  
+
         cursor: pointer;
         text-transform: uppercase;
-  
+
         &:hover {
           background-color: var(--secondary-hover-color);
         }
@@ -49,10 +48,24 @@
 
     .about-us-img-container {
       padding: 1rem;
-      @include clamp("max-width", 15rem, 55vw, 25rem);
+      flex: 0 0 25rem;
 
       border: 5px solid black;
       border-style: groove;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about-us-section {
+    @include clamp("padding-top", 3.5rem, 30vw, 20rem);
+    @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+
+    .about-us-article {
+
+      .about-us-img-container {
+        flex: 0 0 20rem;
+      }
     }
   }
 }
@@ -62,13 +75,13 @@
 
     .about-us-article {
       flex-direction: column;
-        -ms-flex-direction: column;
-        -moz-flex-direction: column;
-        -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
 
-        .about-us-img-container {
-          @include clamp("width", 10rem, 80vw, 25rem);
-        }
+      .about-us-img-container {
+        flex: 0 0 10rem;
+      }
     }
   }
 }
