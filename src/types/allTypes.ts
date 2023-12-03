@@ -4,7 +4,8 @@ export type ServiceCards = {
   title: string,
   text: React.ReactNode | string,
   moreInfo: string,
-  page: string
+  page: string,
+  delay: number
 }
 
 export type ReferenceSeriesOneBlock = {

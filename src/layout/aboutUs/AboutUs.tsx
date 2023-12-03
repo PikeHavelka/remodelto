@@ -1,7 +1,5 @@
 import "./aboutUs.scss"
 import aboutUsKitchenInterior from "../../assets/images/aboutUs/aboutUsKitchenInterior kopie.jpg"
-import { LazyLoadImage } from "react-lazy-load-image-component"
-import remodelToPlaceHolder from "../../assets/images/remodelToPlaceHolder.jpg"
 
 export const AboutUs = () => {
   return (
@@ -39,12 +37,10 @@ export const AboutUs = () => {
           <a className="about-us-btn-contact" href="#kontakt">dejte nám vědět</a>
         </div>
 
-
         <div className="about-us-img-container">
-          <LazyLoadImage
+          <img
             src={aboutUsKitchenInterior}
             alt="kuchyň po rekonstrukci"
-            placeholderSrc={remodelToPlaceHolder}
           />
         </div>
       </article>
