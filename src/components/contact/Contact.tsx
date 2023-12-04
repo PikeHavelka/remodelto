@@ -23,11 +23,11 @@ export const Contact = () => {
           <FacebookIcon />
         </a>
 
-        <a href="mailto:Homerekojo@gmail.com" aria-label="Odkaz na email majitele firmy">
+        <a href="mailto:homerekojo@gmail.com" aria-label="Odkaz na email majitele firmy">
           <EmailIcon />
         </a>
 
-        <a href="tel:606 167 019" aria-label="Telefonní číslo na majítele firmy">
+        <a href="tel:606 167 019" aria-label="Telefonní číslo na majitele firmy">
           <PhoneIcon />
         </a>
       </div>

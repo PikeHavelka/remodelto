@@ -24,7 +24,7 @@ const serviceCardsData: { [key: string]: ServiceCards } = {
     text: <p>Naše dovednosti a zkušenosti jsou vám k dispozici. Pokud máte <strong>starou</strong> nebo <strong>opotřebovanou budovu</strong>, neváhejte se na nás obrátit. Naše služby zahrnují <strong>kompletní renovaci, modernizaci</strong> a zvýšení energetické účinnosti vaší nemovitosti.</p>,
     moreInfo: "Více informací zde",
     page: "/renovace",
-    delay: .5
+    delay: .3
   },
 
   stavebniPrace: {
@@ -34,7 +34,7 @@ const serviceCardsData: { [key: string]: ServiceCards } = {
     text: <p>Nabízíme <strong>stavební služby</strong> pro <strong>všechny typy budov</strong>, od <strong>malých domků</strong> po <strong>komerční stavby</strong>. Naši zkušení stavitelé a řemeslníci vám zajistí kvalitní výsledky, ať už jde o <strong>novou konstrukci, rozšíření stávající budovy</strong> nebo <strong>údržbu</strong>.</p>,
     moreInfo: "Více informací zde",
     page: "/stavebni-prace",
-    delay: .7
+    delay: .3
   },
 
   vystavbaBudov: {
@@ -54,7 +54,7 @@ const serviceCardsData: { [key: string]: ServiceCards } = {
     text: <p>Máte nápad, ale nevíte, jak ho uskutečnit? Naši odborníci jsou tu, aby vám pomohli s <strong>plánováním</strong> a <strong>realizací vašeho projektu</strong>.</p>,
     moreInfo: "Více informací zde",
     page: "/konzultace",
-    delay: .5
+    delay: .3
   },
 
   ostatni: {
@@ -64,7 +64,7 @@ const serviceCardsData: { [key: string]: ServiceCards } = {
     text: <p>Máte <strong>speciální požadavek a nevíte, jak ho uskutečnit</strong>? Neváhejte nás <a href="#kontakt">kontaktovat</a>. Uděláme vše proto abychom vám vyšli vstříc.</p>,
     moreInfo: "Více informací zde",
     page: "/ostatni",
-    delay: .7
+    delay: .3
   }
 }
 
