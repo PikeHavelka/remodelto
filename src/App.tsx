@@ -1,14 +1,13 @@
 import "./app.css"
 import { Main } from "./layout/index"
 import { Routes, Route } from "react-router-dom"
-import { SharedLayout, ErrorPage, MoreReferences, ConstructionOfBuilding, ConstructionWork, Consultation, Interiors, Others, Renovation } from "./pages/index"
+import { SharedLayout, ErrorPage, ConstructionOfBuilding, ConstructionWork, Consultation, Interiors, Others, Renovation } from "./pages/index"
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<SharedLayout />}>
         <Route index element={<Main />} />
-        <Route path="/dalsi-reference" element={<MoreReferences />} />
         <Route path="/interiery" element={<Interiors />} />
         <Route path="/renovace" element={<Renovation />} />
         <Route path="/stavebni-prace" element={<ConstructionWork />} />

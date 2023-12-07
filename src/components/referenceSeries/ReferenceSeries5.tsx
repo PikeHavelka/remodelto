@@ -1,5 +1,5 @@
-import "./referenceSeries.scss"
 import SeriesIntroductionPhoto5 from "../../assets/images/references/SeriesIntroduction5.jpg"
+import "./referenceSeries.scss"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import remodelToPlaceHolder from "../../assets/images/remodelToPlaceHolder.jpg"
 

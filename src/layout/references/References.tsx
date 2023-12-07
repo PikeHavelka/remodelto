@@ -1,10 +1,9 @@
 import "./references.scss"
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import { ReferenceSeries3, ReferenceSeries5 } from "../../components/"
 
 export const References = () => {
-  const [index, setIndex] = useState(0)
+  const [indexSlider, setIndexSlider] = useState(0)
 
   /* Store Assets from folders */
   function importAll(r: any): string[] {
@@ -17,16 +16,29 @@ export const References = () => {
 
   const sliderImges = importAll(require.context("../../assets/images/imgSlider", false, /\.(png|jpe?g)$/))
 
+  const series1 = importAll(require.context("../../assets/images/references/series1", false, /\.(png|jpe?g)$/))
+  const series2 = importAll(require.context("../../assets/images/references/series2", false, /\.(png|jpe?g)$/))
+  const series4 = importAll(require.context("../../assets/images/references/series4", false, /\.(png|jpe?g)$/))
+  const series6 = importAll(require.context("../../assets/images/references/series6", false, /\.(png|jpe?g)$/))
+  const series7 = importAll(require.context("../../assets/images/references/series7", false, /\.(png|jpe?g)$/))
+  const series8 = importAll(require.context("../../assets/images/references/series8", false, /\.(png|jpe?g)$/))
+  const series9 = importAll(require.context("../../assets/images/references/series9", false, /\.(png|jpe?g)$/))
+  const series10 = importAll(require.context("../../assets/images/references/series10", false, /\.(png|jpe?g)$/))
+  const series11 = importAll(require.context("../../assets/images/references/series11", false, /\.(png|jpe?g)$/))
+
+  const allSeries = [series1, series2, series4, series6, series7, series8, series9, series10, series11]
+
+  /* Slider */
   useEffect(() => {
-    if (index < 0) setIndex(sliderImges.length - 1)
-    else if (index > sliderImges.length - 1) setIndex(0)
+    if (indexSlider < 0) setIndexSlider(sliderImges.length - 1)
+    else if (indexSlider > sliderImges.length - 1) setIndexSlider(0)
 
     const intervalID = setInterval(() => {
-      setIndex(index + 1)
+      setIndexSlider(indexSlider + 1)
     }, 8000)
 
     return () => clearInterval(intervalID)
-  }, [index])
+  }, [indexSlider])
 
   return (
     <section className="references" id="reference">
@@ -74,9 +86,9 @@ export const References = () => {
 
               let slideNameClass = "next-slide"
 
-              if (indexImg === index) slideNameClass = "active-slide"
+              if (indexImg === indexSlider) slideNameClass = "active-slide"
 
-              if (indexImg === index - 1 || (index === 0 && indexImg === sliderImges.length - 1)) slideNameClass = "last-slide"
+              if (indexImg === indexSlider - 1 || (indexSlider === 0 && indexImg === sliderImges.length - 1)) slideNameClass = "last-slide"
 
               return <div className={slideNameClass} key={indexImg}>
                 <img src={oneImg} alt="přehled rekonstrukcí" />
@@ -89,7 +101,7 @@ export const References = () => {
 
         <ReferenceSeries5 />
 
-        <Link to="dalsi-reference" className="references-btn">Další reference</Link>
+
       </article>
     </section >
   )

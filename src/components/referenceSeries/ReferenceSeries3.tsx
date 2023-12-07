@@ -1,5 +1,5 @@
-import "./referenceSeries.scss"
 import SeriesIntroductionPhoto3 from "../../assets/images/references/SeriesIntroduction3.jpg"
+import "./referenceSeries.scss"
 import { LazyLoadImage } from "react-lazy-load-image-component"
 import remodelToPlaceHolder from "../../assets/images/remodelToPlaceHolder.jpg"
 
@@ -23,7 +23,6 @@ export const ReferenceSeries3 = () => {
             <h2>Renovace rodinného domku s terasou</h2>
             <h3>Reference</h3>
           </div>
-
 
           <div className="references-series-text">
             <p>

@@ -1,6 +1,5 @@
 export { ErrorPage } from "./errorPage/ErrorPage"
 export { SharedLayout } from "./sharedLayout/SharedLayout"
-export { MoreReferences } from "./moreReferences/MoreReferences"
 export { ConstructionWork } from "./constructionWork/ConstructionWork"
 export { ConstructionOfBuilding } from "./constructionOfBuilding/ConstructionOfBuilding"
 export { Consultation } from "./consultation/Consultation"
