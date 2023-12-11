@@ -127,6 +127,38 @@
       }
     }
   }
+
+  // Buttons next, previous series
+  .references-series-href-italic {
+    font-style: italic;
+    color: black;
+    text-decoration: underline;
+  }
+
+  .references-series-container {
+    position: relative;
+    margin-bottom: 5rem;
+
+
+    button {
+      position: absolute;
+      top: 13rem;
+
+      background: none;
+      border: none;
+
+      cursor: pointer;
+      font-size: 4rem;
+    }
+    
+    .references-left-btn {
+      left: -1.5rem;
+    }
+
+    .references-right-btn {
+      right: -1.5rem;
+    }
+  }
 }
 
 @media (max-width: 1300px) {

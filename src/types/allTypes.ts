@@ -8,19 +8,14 @@ export type ServiceCards = {
   delay: number
 }
 
-export type ReferenceSeriesOneBlock = { // odstranit
-  currentSeries: string[]
-}
-
 export type ReferenceSeries = {
   id: number,
   title: string,
   references: string,
-  description: string
+  description: React.ReactNode | string,
+  titleImage: string
 }
 
-export type ReferenceSeriesAllProps = {
-  currentSeries: string[]
-  dataReferenceSeriesAll: ReferenceSeries[]
-  index: number
+export type ReferenceSeriesProps = ReferenceSeries & {
+  series: string[],
 }

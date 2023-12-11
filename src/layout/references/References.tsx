@@ -1,9 +1,11 @@
 import "./references.scss"
 import { useEffect, useState } from "react"
-import { ReferenceSeries3, ReferenceSeries5 } from "../../components/"
+import { ReferenceSeries } from "../../components/"
+import dataReferenceSeries from "../../data/dataReferenceSeries"
 
 export const References = () => {
   const [indexSlider, setIndexSlider] = useState(0)
+  const [indexSeriesComponent, setIndexSeriesComponent] = useState(0)
 
   /* Store Assets from folders */
   function importAll(r: any): string[] {
@@ -18,15 +20,39 @@ export const References = () => {
 
   const series1 = importAll(require.context("../../assets/images/references/series1", false, /\.(png|jpe?g)$/))
   const series2 = importAll(require.context("../../assets/images/references/series2", false, /\.(png|jpe?g)$/))
+  const series3 = importAll(require.context("../../assets/images/references/series3", false, /\.(png|jpe?g)$/))
   const series4 = importAll(require.context("../../assets/images/references/series4", false, /\.(png|jpe?g)$/))
+  const series5 = importAll(require.context("../../assets/images/references/series5", false, /\.(png|jpe?g)$/))
   const series6 = importAll(require.context("../../assets/images/references/series6", false, /\.(png|jpe?g)$/))
   const series7 = importAll(require.context("../../assets/images/references/series7", false, /\.(png|jpe?g)$/))
   const series8 = importAll(require.context("../../assets/images/references/series8", false, /\.(png|jpe?g)$/))
   const series9 = importAll(require.context("../../assets/images/references/series9", false, /\.(png|jpe?g)$/))
   const series10 = importAll(require.context("../../assets/images/references/series10", false, /\.(png|jpe?g)$/))
-  const series11 = importAll(require.context("../../assets/images/references/series11", false, /\.(png|jpe?g)$/))
 
-  const allSeries = [series1, series2, series4, series6, series7, series8, series9, series10, series11]
+  const referenceSeriesComponents = [
+    <ReferenceSeries {...dataReferenceSeries.series1} series={series1} />,
+    <ReferenceSeries {...dataReferenceSeries.series2} series={series2} />,
+    <ReferenceSeries {...dataReferenceSeries.series3} series={series3} />,
+    <ReferenceSeries {...dataReferenceSeries.series5} series={series5} />,
+    <ReferenceSeries {...dataReferenceSeries.series6} series={series6} />,
+    <ReferenceSeries {...dataReferenceSeries.series7} series={series7} />,
+    <ReferenceSeries {...dataReferenceSeries.series8} series={series8} />,
+    <ReferenceSeries {...dataReferenceSeries.series9} series={series9} />,
+    <ReferenceSeries {...dataReferenceSeries.series10} series={series10} />
+  ]
+
+  /* Buttons Show Series */
+  const showNextSeriesComponent = () => {
+    setIndexSeriesComponent(indexSeriesComponent + 1)
+
+    if (indexSeriesComponent === referenceSeriesComponents.length - 1) setIndexSeriesComponent(0)
+  }
+
+  const showPreviousSeriesComponent = () => {
+    setIndexSeriesComponent(indexSeriesComponent - 1)
+
+    if (indexSeriesComponent <= 0) setIndexSeriesComponent(referenceSeriesComponents.length - 1)
+  }
 
   /* Slider */
   useEffect(() => {
@@ -68,13 +94,13 @@ export const References = () => {
 
               <br />
 
-              <p className="reference--text-moto-italic">
+              <p className="reference-text-moto-italic">
                 "Společně budujeme vaše sny kvalitním řemeslem a péčí."
               </p>
 
               <br />
 
-              <p className="reference--text-moto-italic">
+              <p className="reference-text-moto-italic">
                 "Vy sníte, my stavíme."
               </p>
 
@@ -97,11 +123,14 @@ export const References = () => {
           </div>
         </div>
 
-        <ReferenceSeries3 />
+        <div className="references-series-container">
+          <section className="references-series">
+            {referenceSeriesComponents[indexSeriesComponent]}
+          </section>
 
-        <ReferenceSeries5 />
-
-
+          <button className="references-left-btn" onClick={showPreviousSeriesComponent}>&lt;</button>
+          <button className="references-right-btn" onClick={showNextSeriesComponent}>&gt;</button>
+        </div>
       </article>
     </section >
   )

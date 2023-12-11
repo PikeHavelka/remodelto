@@ -1,3 +1,94 @@
 @import "../../partials/mixins";
 
-@include ReferenceSeries;
+.references-series {
+  margin-top: 5rem;
+
+  .references-series-title-text-photo {
+    @include FlexJustifyItemCenter;
+    gap: 2rem;
+
+    padding: 3rem;
+    border-bottom: 5px solid var(--decoration-color);
+
+    .references-series-title-text {
+
+      .references-series-subtitle {
+        @include TitleTextH3;
+
+        margin-bottom: .5rem;
+
+        h3 {
+          border-left: 5px solid var(--decoration-color);
+          padding-left: .5rem;
+          color: rgba(0, 0, 0, 0.5);
+        }
+      }
+
+      .references-series-text {
+        @include NormalText;
+        margin-top: 1.5rem;
+      }
+    }
+
+    .references-series-introduction-photo {
+      @include clamp("max-width", 15rem, 65vw, 25rem);
+    }
+  }
+
+  .references-series-img-container {
+    display: grid;
+    display: -ms-grid;
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    -ms-grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    gap: .5rem;
+
+    padding: 1rem;
+
+    figure {
+      overflow: hidden;
+      cursor: pointer;
+
+      img {
+        transition: transform 250ms linear;
+        -webkit-transition: transform 250ms linear;
+        -moz-transition: transform 250ms linear;
+        -o-transition: transform 250ms linear;
+
+        &:hover {
+          transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -o-transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .references-series {
+
+    .references-series-subtitle {
+      font-size: 1rem !important;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .references-series {
+    text-align: center;
+    margin-top: 3rem !important;
+
+    .references-series-subtitle {
+      font-size: 1rem !important;
+    }
+
+    .references-series-title-text-photo {
+      flex-direction: column;
+      -ms-flex-direction: column;
+      -moz-flex-direction: column;
+      -webkit-flex-direction: column;
+    }
+  }
+}

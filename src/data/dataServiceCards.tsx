@@ -6,7 +6,7 @@ import outdoorPool from "../assets/images/serviceCardImages/servicesCardOutdoorP
 import roomRenovation from "../assets/images/serviceCardImages/servicesCardRoomRenovation.png"
 import { ServiceCards } from "../types/allTypes"
 
-const serviceCardsData: { [key: string]: ServiceCards } = {
+const dataserviceCards: { [key: string]: ServiceCards } = {
   interiery: {
     id: 1,
     image: livingroom,
@@ -68,4 +68,4 @@ const serviceCardsData: { [key: string]: ServiceCards } = {
   }
 }
 
-export default serviceCardsData
+export default dataserviceCards
