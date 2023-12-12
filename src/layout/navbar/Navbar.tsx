@@ -34,7 +34,7 @@ export const Navbar = () => {
           </li>
 
           <li>
-            <a href="#kontakt">Kontakt</a>
+            <a href="/#kontakt">Kontakt</a>
           </li>
         </ul>
 
@@ -65,6 +65,7 @@ export const Navbar = () => {
         </button>
       </div>
 
+      {/* progress bar */}
       <motion.div
         style={{
           scaleX: scrollYProgress,

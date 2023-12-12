@@ -14,7 +14,7 @@ export const ReferenceSeries = (props: ReferenceSeriesProps) => {
           </div>
 
           <div className="references-series-text">
-            <p>{props.description}</p>
+            {props.description}
           </div>
         </div>
 

@@ -18,16 +18,16 @@ export const References = () => {
 
   const sliderImges = importAll(require.context("../../assets/images/imgSlider", false, /\.(png|jpe?g)$/))
 
-  const series1 = importAll(require.context("../../assets/images/references/series1", false, /\.(png|jpe?g)$/))
-  const series2 = importAll(require.context("../../assets/images/references/series2", false, /\.(png|jpe?g)$/))
-  const series3 = importAll(require.context("../../assets/images/references/series3", false, /\.(png|jpe?g)$/))
-  const series4 = importAll(require.context("../../assets/images/references/series4", false, /\.(png|jpe?g)$/))
-  const series5 = importAll(require.context("../../assets/images/references/series5", false, /\.(png|jpe?g)$/))
-  const series6 = importAll(require.context("../../assets/images/references/series6", false, /\.(png|jpe?g)$/))
-  const series7 = importAll(require.context("../../assets/images/references/series7", false, /\.(png|jpe?g)$/))
-  const series8 = importAll(require.context("../../assets/images/references/series8", false, /\.(png|jpe?g)$/))
-  const series9 = importAll(require.context("../../assets/images/references/series9", false, /\.(png|jpe?g)$/))
-  const series10 = importAll(require.context("../../assets/images/references/series10", false, /\.(png|jpe?g)$/))
+  const series1 = importAll(require.context("../../assets/images/references/thumbnails/series1", false, /\.(png|jpe?g)$/))
+  const series2 = importAll(require.context("../../assets/images/references/thumbnails/series2", false, /\.(png|jpe?g)$/))
+  const series3 = importAll(require.context("../../assets/images/references/thumbnails/series3", false, /\.(png|jpe?g)$/))
+  const series4 = importAll(require.context("../../assets/images/references/thumbnails/series4", false, /\.(png|jpe?g)$/))
+  const series5 = importAll(require.context("../../assets/images/references/thumbnails/series5", false, /\.(png|jpe?g)$/))
+  const series6 = importAll(require.context("../../assets/images/references/thumbnails/series6", false, /\.(png|jpe?g)$/))
+  const series7 = importAll(require.context("../../assets/images/references/thumbnails/series7", false, /\.(png|jpe?g)$/))
+  const series8 = importAll(require.context("../../assets/images/references/thumbnails/series8", false, /\.(png|jpe?g)$/))
+  const series9 = importAll(require.context("../../assets/images/references/thumbnails/series9", false, /\.(png|jpe?g)$/))
+  const series10 = importAll(require.context("../../assets/images/references/thumbnails/series10", false, /\.(png|jpe?g)$/))
 
   const referenceSeriesComponents = [
     <ReferenceSeries {...dataReferenceSeries.series1} series={series1} />,
