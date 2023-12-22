@@ -15,149 +15,56 @@
     -webkit-flex-direction: column;
     align-items: center;
     -webkit-align-items: center;
-
-    .reference-article-slider-container {
-      display: flex;
-      display: -webkit-box;
-      display: -moz-box;
-      display: -ms-flexbox;
-      display: -webkit-flex;
-      gap: 4rem;
-
-      margin-bottom: 5rem;
-
-      .references-title-text-top {
-        margin: 0 auto 2rem auto;
-        max-width: 450px;
-        text-align: center;
-
-        flex: 1 1 auto;
-
-        .references-subtitle {
-          @include TitleTextH2;
-          margin-bottom: .5rem;
-          color: var(--secondary-color);
-        }
-
-        .references-text {
-          @include NormalText;
-          margin-top: 1rem;
-
-          .references-text-href-italic {
-            font-style: italic;
-            color: var(--general-color);
-            text-decoration: underline;
-          }
-        }
-
-        .reference--text-moto-italic {
-          font-style: italic;
-          color: var(--general-color);
-        }
-      }
-
-      .references-img-slider {
-        position: relative;
-        margin: 0 auto;
-
-        flex: 0 0 auto;
-
-        @include clamp("width", 10rem, 88vw, 34rem);
-        @include clamp("height", 5rem, 66vw, 25rem);
-
-        overflow: hidden;
-        box-shadow: 1px 1px 10px var(--general-color);
-        border: 1rem ridge var(--decoration-color);
-
-        div {
-          position: absolute;
-          inset: unset;
-
-          transition: all 1.5s linear;
-          -webkit-transition: all 1.5s linear;
-          -moz-transition: all 1.5s linear;
-          -o-transition: all 1.5s linear;
-
-          opacity: 0;
-
-          &.active-slide {
-            transform: translateX(0);
-            -ms-transform: translateX(0);
-            -moz-transform: translateX(0);
-            -webkit-transform: translateX(0);
-            -o-transform: translateX(0);
-
-            opacity: 1;
-          }
-
-          &.last-slide {
-            transform: translateX(-100%);
-            -ms-transform: translateX(-100%);
-            -moz-transform: translateX(-100%);
-            -webkit-transform: translateX(-100%);
-            -o-transform: translateX(-100%);
-          }
-
-          &.next-slide {
-            transform: translateX(100%);
-            -ms-transform: translateX(100%);
-            -moz-transform: translateX(100%);
-            -webkit-transform: translateX(100%);
-            -o-transform: translateX(100%);
-          }
-        }
-      }
-    }
-
-    .references-btn {
-      @include TitleTextH2;
-
-      padding: .5rem 1rem;
-      margin: 5rem 0;
-
-      color: var(--general-bg-color);
-      border: none;
-      background-color: var(--decoration-color);
-
-      cursor: pointer;
-      text-transform: uppercase;
-
-      &:hover {
-        background-color: var(--secondary-hover-color);
-      }
-    }
   }
 
-  // Buttons next, previous series
-  .references-series-href-italic {
-    font-style: italic;
-    color: black;
-    text-decoration: underline;
+  .references-btn {
+    @include TitleTextH2;
+
+    padding: .5rem 1rem;
+    margin: 5rem 0;
+
+    color: var(--general-bg-color);
+    border: none;
+    background-color: var(--decoration-color);
+
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: var(--secondary-hover-color);
+    }
+  }
+}
+
+// Buttons next, previous series
+.references-series-href-italic {
+  font-style: italic;
+  color: black;
+  text-decoration: underline;
+}
+
+.references-series-container {
+  position: relative;
+  margin-bottom: 5rem;
+
+
+  button {
+    position: absolute;
+    top: 15rem;
+
+    background: none;
+    border: none;
+
+    cursor: pointer;
   }
 
-  .references-series-container {
-    position: relative;
-    margin-bottom: 5rem;
+  .references-left-btn {
+    left: -1rem;
+  }
 
-
-    button {
-      position: absolute;
-      top: 13rem;
-
-      background: none;
-      border: none;
-
-      cursor: pointer;
-      font-size: 4rem;
-    }
-    
-    .references-left-btn {
-      left: -1.5rem;
-    }
-
-    .references-right-btn {
-      right: -1.5rem;
-    }
+  .references-right-btn {
+    right: -1rem;
+    transform: rotate(180deg);
   }
 }
 
@@ -183,12 +90,20 @@
         gap: 0;
         margin-bottom: 2rem;
       }
-
-      .references-series3,
-      .references-series5 {
-        padding-bottom: 1.5rem;
-        margin-top: 0rem;
-      }
     }
+  }
+}
+
+@media (max-width: 900px) {
+  button {
+    top: 25rem !important;
+  }
+
+  .references-left-btn {
+    left: 2rem !important;
+  }
+
+  .references-right-btn {
+    right: 2rem !important;
   }
 }

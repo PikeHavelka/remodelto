@@ -1,10 +1,10 @@
 import "./references.scss"
-import { useEffect, useState } from "react"
-import { ReferenceSeries } from "../../components/"
+import { useState } from "react"
+import { ReferenceSeries, ReferenceSlider } from "../../components/"
 import dataReferenceSeries from "../../data/dataReferenceSeries"
+import { DoubleArrow } from "../../assets/svgIcons"
 
 export const References = () => {
-  const [indexSlider, setIndexSlider] = useState(0)
   const [indexSeriesComponent, setIndexSeriesComponent] = useState(0)
 
   /* Store Assets from folders */
@@ -16,8 +16,7 @@ export const References = () => {
     return assets
   }
 
-  const sliderImges = importAll(require.context("../../assets/images/imgSlider", false, /\.(png|jpe?g)$/))
-
+  // Thumbnails
   const series1 = importAll(require.context("../../assets/images/references/thumbnails/series1", false, /\.(png|jpe?g)$/))
   const series2 = importAll(require.context("../../assets/images/references/thumbnails/series2", false, /\.(png|jpe?g)$/))
   const series3 = importAll(require.context("../../assets/images/references/thumbnails/series3", false, /\.(png|jpe?g)$/))
@@ -29,16 +28,72 @@ export const References = () => {
   const series9 = importAll(require.context("../../assets/images/references/thumbnails/series9", false, /\.(png|jpe?g)$/))
   const series10 = importAll(require.context("../../assets/images/references/thumbnails/series10", false, /\.(png|jpe?g)$/))
 
+  //Full size
+  const series1FullSized = importAll(require.context("../../assets/images/references/fullSize/series1", false, /\.(png|jpe?g)$/))
+  const series2FullSized = importAll(require.context("../../assets/images/references/fullSize/series2", false, /\.(png|jpe?g)$/))
+  const series3FullSized = importAll(require.context("../../assets/images/references/fullSize/series3", false, /\.(png|jpe?g)$/))
+  const series4FullSized = importAll(require.context("../../assets/images/references/fullSize/series4", false, /\.(png|jpe?g)$/))
+  const series5FullSized = importAll(require.context("../../assets/images/references/fullSize/series5", false, /\.(png|jpe?g)$/))
+  const series6FullSized = importAll(require.context("../../assets/images/references/fullSize/series6", false, /\.(png|jpe?g)$/))
+  const series7FullSized = importAll(require.context("../../assets/images/references/fullSize/series7", false, /\.(png|jpe?g)$/))
+  const series8FullSized = importAll(require.context("../../assets/images/references/fullSize/series8", false, /\.(png|jpe?g)$/))
+  const series9FullSized = importAll(require.context("../../assets/images/references/fullSize/series9", false, /\.(png|jpe?g)$/))
+  const series10FullSized = importAll(require.context("../../assets/images/references/fullSize/series10", false, /\.(png|jpe?g)$/))
+
   const referenceSeriesComponents = [
-    <ReferenceSeries {...dataReferenceSeries.series1} series={series1} />,
-    <ReferenceSeries {...dataReferenceSeries.series2} series={series2} />,
-    <ReferenceSeries {...dataReferenceSeries.series3} series={series3} />,
-    <ReferenceSeries {...dataReferenceSeries.series5} series={series5} />,
-    <ReferenceSeries {...dataReferenceSeries.series6} series={series6} />,
-    <ReferenceSeries {...dataReferenceSeries.series7} series={series7} />,
-    <ReferenceSeries {...dataReferenceSeries.series8} series={series8} />,
-    <ReferenceSeries {...dataReferenceSeries.series9} series={series9} />,
-    <ReferenceSeries {...dataReferenceSeries.series10} series={series10} />
+    <ReferenceSeries
+      {...dataReferenceSeries.series1}
+      series={series1}
+      seriesFullSized={series1FullSized}
+    />,
+
+    <ReferenceSeries
+      {...dataReferenceSeries.series2}
+      series={series2}
+      seriesFullSized={series2FullSized}
+    />,
+
+    <ReferenceSeries
+      {...dataReferenceSeries.series3}
+      series={series3}
+      seriesFullSized={series3FullSized}
+    />,
+
+    <ReferenceSeries
+      {...dataReferenceSeries.series5}
+      series={series5}
+      seriesFullSized={series5FullSized}
+    />,
+
+    <ReferenceSeries
+      {...dataReferenceSeries.series6}
+      series={series6}
+      seriesFullSized={series6FullSized}
+    />,
+
+    <ReferenceSeries
+      {...dataReferenceSeries.series7}
+      series={series7}
+      seriesFullSized={series7FullSized}
+    />,
+
+    <ReferenceSeries
+      {...dataReferenceSeries.series8}
+      series={series8}
+      seriesFullSized={series8FullSized}
+    />,
+
+    <ReferenceSeries
+      {...dataReferenceSeries.series9}
+      series={series9}
+      seriesFullSized={series9FullSized}
+    />,
+
+    <ReferenceSeries
+      {...dataReferenceSeries.series10}
+      series={series10}
+      seriesFullSized={series10FullSized}
+    />
   ]
 
   /* Buttons Show Series */
@@ -54,82 +109,30 @@ export const References = () => {
     if (indexSeriesComponent <= 0) setIndexSeriesComponent(referenceSeriesComponents.length - 1)
   }
 
-  /* Slider */
-  useEffect(() => {
-    if (indexSlider < 0) setIndexSlider(sliderImges.length - 1)
-    else if (indexSlider > sliderImges.length - 1) setIndexSlider(0)
-
-    const intervalID = setInterval(() => {
-      setIndexSlider(indexSlider + 1)
-    }, 8000)
-
-    return () => clearInterval(intervalID)
-  }, [indexSlider])
-
   return (
     <section className="references" id="reference">
       <article className="references-article container-second">
-        <div className="reference-article-slider-container">
-          <div className="references-title-text-top">
-            <div className="references-subtitle">
-              <h2>Reference</h2>
-            </div>
 
-            <div className="references-text">
-              <p>
-                Jsme hrdí na naši dlouholetou tradici a zkušenosti v oblasti <strong>stavebnictví</strong>. Naše firma se specializuje na <strong>kvalitní</strong> a <strong>spolehlivou stavební práci</strong>, a to jak v oblasti <strong>bytového</strong>, tak <strong>komerčního stavebnictví</strong>.
-              </p>
-
-              <br />
-
-              <p>
-                Reference našich <strong>stavebních projektů</strong> jsou důkazem našeho <strong>závazku</strong> k <strong>excelenci</strong>.
-              </p>
-
-              <br />
-
-              <p>
-                Pokud máte zájem o spolupráci na vašem projektu, nebo máte další otázky ohledně našich služeb, neváhejte nás <a className="references-text-href-italic" href="#kontakt">kontaktovat</a>.
-              </p>
-
-              <br />
-
-              <p className="reference-text-moto-italic">
-                "Společně budujeme vaše sny kvalitním řemeslem a péčí."
-              </p>
-
-              <br />
-
-              <p className="reference-text-moto-italic">
-                "Vy sníte, my stavíme."
-              </p>
-
-            </div>
-          </div>
-
-          <div className="references-img-slider">
-            {sliderImges.map((oneImg, indexImg) => {
-
-              let slideNameClass = "next-slide"
-
-              if (indexImg === indexSlider) slideNameClass = "active-slide"
-
-              if (indexImg === indexSlider - 1 || (indexSlider === 0 && indexImg === sliderImges.length - 1)) slideNameClass = "last-slide"
-
-              return <div className={slideNameClass} key={indexImg}>
-                <img src={oneImg} alt="přehled rekonstrukcí" />
-              </div>
-            })}
-          </div>
-        </div>
+        <ReferenceSlider />
 
         <div className="references-series-container">
           <section className="references-series">
             {referenceSeriesComponents[indexSeriesComponent]}
           </section>
 
-          <button className="references-left-btn" onClick={showPreviousSeriesComponent}>&lt;</button>
-          <button className="references-right-btn" onClick={showNextSeriesComponent}>&gt;</button>
+          <button
+            className="references-left-btn"
+            onClick={showPreviousSeriesComponent}
+            title="předchozí reference">
+            <DoubleArrow />
+          </button>
+
+          <button
+            className="references-right-btn"
+            onClick={showNextSeriesComponent}
+            title="další reference">
+            <DoubleArrow />
+          </button>
         </div>
       </article>
     </section >
