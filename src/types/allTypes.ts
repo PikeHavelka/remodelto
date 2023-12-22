@@ -18,4 +18,5 @@ export type ReferenceSeries = {
 
 export type ReferenceSeriesProps = ReferenceSeries & {
   series: string[],
+  seriesFullSized: string[]
 }
