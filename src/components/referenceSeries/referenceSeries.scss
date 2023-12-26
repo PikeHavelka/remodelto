@@ -1,8 +1,6 @@
 @import "../../partials/mixins";
 
 .references-series {
-  margin-top: 5rem;
-
   .references-series-title-text-photo {
     @include FlexJustifyItemCenter;
     gap: 2rem;
@@ -10,8 +8,21 @@
     padding: 3rem;
     border-bottom: 5px solid var(--decoration-color);
 
-    .references-series-title-text {
+    .references-series-left-btn,
+    .references-series-right-btn {
+      border-radius: 5px;
+      border: none;
+      background: none;
 
+      padding: .35rem .2rem .2rem;
+      cursor: pointer;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+
+    .references-series-title-text {
       .references-series-subtitle {
         @include TitleTextH3;
 
@@ -31,15 +42,15 @@
     }
 
     .references-series-introduction-photo {
-      @include clamp("max-width", 15rem, 65vw, 25rem);
+      @include clamp("max-width", 15rem, 35vw, 25rem);
     }
   }
 
   .references-series-img-container {
     display: grid;
     display: -ms-grid;
-    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
-    -ms-grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    -ms-grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
     gap: .5rem;
 
     padding: 1rem;
@@ -66,22 +77,16 @@
   }
 }
 
-@media (max-width: 950px) {
-  .references-series {
-
-    .references-series-subtitle {
-      font-size: 1rem !important;
-    }
-  }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   .references-series {
     text-align: center;
-    margin-top: 3rem !important;
 
     .references-series-subtitle {
       font-size: 1rem !important;
+
+      h3 {
+        border-left: none !important;
+      }
     }
 
     .references-series-title-text-photo {
@@ -89,6 +94,112 @@
       -ms-flex-direction: column;
       -moz-flex-direction: column;
       -webkit-flex-direction: column;
+
+      .references-series-introduction-photo {
+        @include clamp("max-width", 17rem, 55vw, 25rem);
+      }
     }
+  }
+}
+
+@media (max-width: 735px) {
+  .references-series {
+
+    .references-series-img-container{
+      grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+      -ms-grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+    }
+  }
+}
+
+// Modal content
+.image-modal-show {
+  display: block;
+
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 10;
+
+  .image-modal {
+    @include clamp("max-width", 20rem, 99vw, 45rem);
+    max-height: auto;
+
+    animation: imageModal 350ms linear;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    border: 2px solid black;
+  }
+
+  .image-modal-buttons {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+
+    background: rgba(0, 0, 0, 0.5);
+    padding: .3rem .2rem .2rem;
+
+    animation: imageModalBTNS 300ms linear;
+
+    .image-modal-decline-cross,
+    .image-modal-left-arrow,
+    .image-modal-right-arrow {
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    .image-modal-decline-cross {
+      margin-inline: .8rem;
+    }
+  }
+}
+
+.image-modal-hide {
+  display: none;
+}
+
+@keyframes imageModal {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes imageModalBTNS {
+  from {
+    bottom: -10%;
+  }
+
+  to {
+    bottom: 0;
   }
 }

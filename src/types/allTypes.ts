@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react"
+
 export type ServiceCards = {
   id: number,
   image: string,
@@ -18,5 +20,7 @@ export type ReferenceSeries = {
 
 export type ReferenceSeriesProps = ReferenceSeries & {
   series: string[],
-  seriesFullSized: string[]
+  seriesFullSized: string[],
+  showPreviousSeriesComponent: MouseEventHandler,
+  showNextSeriesComponent: MouseEventHandler
 }

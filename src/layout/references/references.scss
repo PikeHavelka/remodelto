@@ -17,54 +17,15 @@
     -webkit-align-items: center;
   }
 
-  .references-btn {
-    @include TitleTextH2;
-
-    padding: .5rem 1rem;
-    margin: 5rem 0;
-
-    color: var(--general-bg-color);
-    border: none;
-    background-color: var(--decoration-color);
-
-    cursor: pointer;
-    text-transform: uppercase;
-
-    &:hover {
-      background-color: var(--secondary-hover-color);
-    }
-  }
-}
-
-// Buttons next, previous series
-.references-series-href-italic {
-  font-style: italic;
-  color: black;
-  text-decoration: underline;
-}
-
-.references-series-container {
-  position: relative;
-  margin-bottom: 5rem;
-
-
-  button {
-    position: absolute;
-    top: 15rem;
-
-    background: none;
-    border: none;
-
-    cursor: pointer;
+  .references-series-href-italic {
+    font-style: italic;
+    color: black;
+    text-decoration: underline;
   }
 
-  .references-left-btn {
-    left: -1rem;
-  }
-
-  .references-right-btn {
-    right: -1rem;
-    transform: rotate(180deg);
+  .references-series-container {
+    position: relative;
+    margin-bottom: 5rem;
   }
 }
 
@@ -78,9 +39,7 @@
 
 @media (max-width: 1000px) {
   .references {
-
     .references-article {
-
       .reference-article-slider-container {
         flex-direction: column;
         -ms-flex-direction: column;
@@ -91,19 +50,5 @@
         margin-bottom: 2rem;
       }
     }
-  }
-}
-
-@media (max-width: 900px) {
-  button {
-    top: 25rem !important;
-  }
-
-  .references-left-btn {
-    left: 2rem !important;
-  }
-
-  .references-right-btn {
-    right: 2rem !important;
   }
 }
