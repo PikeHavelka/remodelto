@@ -141,6 +141,7 @@
 
   /* SVG Icon colors */
   --prefooter-icons: rgba(255, 255, 255, .79);
+  --image-modal-icons: white;
 
   /* Font-family style */
   --title-text: "Poppins", serif;

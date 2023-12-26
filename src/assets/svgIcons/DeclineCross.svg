@@ -1,0 +1,45 @@
+<svg 
+	width="35"
+	height="35"
+	viewBox="0 0 256 256"
+>
+
+<g
+	strokeWidth="0"
+	strokeDasharray="none"
+	strokeLinecap="butt"
+	strokeLinejoin="miter"
+	strokeMiterlimit="10"
+	fill="none"
+	fillRule="nonzero"
+	opacity="1"
+	transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
+>
+
+	<rect x="-13.59" y="39.95" rx="0" ry="0" width="117.17" height="10.1"
+		strokeWidth="1"
+		strokeDasharray="none"
+		strokeLinecap="butt"
+		strokeLinejoin="miter"
+		strokeMiterlimit="10"
+		fill="var(--image-modal-icons)"
+		fillRule="nonzero"
+		opacity="1"
+		transform="matrix(0.7071 -0.7072 0.7072 0.7071 -18.6396 45.0044)"
+	/>
+
+	<rect x="39.95" y="-13.59" rx="0" ry="0" width="10.1" height="117.17"
+		strokeWidth="1"
+		strokeDasharray="none"
+		strokeLinecap="butt"
+		strokeLinejoin="miter"
+		strokeMiterlimit="10"
+		fill="var(--image-modal-icons)"
+		fillRule="nonzero"
+		opacity="1"
+		transform="matrix(0.7071 -0.7071 0.7071 0.7071 -18.6396 45.0004)"
+	/>
+</g>
+</svg>
+
+<!-- for modal -->
