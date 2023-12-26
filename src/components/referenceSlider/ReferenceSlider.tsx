@@ -14,12 +14,12 @@ export const ReferenceSlider = () => {
   }
 
   const sliderImges = importAll(require.context("../../assets/images/imgSlider", false, /\.(png|jpe?g)$/))
-  
+
   /* Slider */
   useEffect(() => {
     if (indexSlider < 0) setIndexSlider(sliderImges.length - 1)
     else if (indexSlider > sliderImges.length - 1) setIndexSlider(0)
-
+  
     const intervalID = setInterval(() => {
       setIndexSlider(indexSlider + 1)
     }, 8000)
