@@ -25,7 +25,7 @@ export const ReferenceSlider = () => {
     }, 8000)
 
     return () => clearInterval(intervalID)
-  }, [indexSlider])
+  }, [indexSlider, sliderImges.length])
 
   return (
     <div className="reference-article-slider-container">

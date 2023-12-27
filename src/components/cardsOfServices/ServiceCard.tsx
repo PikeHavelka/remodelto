@@ -11,7 +11,7 @@ export const ServiceCard = (props: ServiceCards) => {
 
   useEffect(() => {
     if (isInView) mainControls.start("visible")
-  }, [isInView])
+  }, [isInView, mainControls])
 
   return (
     <motion.div ref={serviceRef} className="services-img-text"
