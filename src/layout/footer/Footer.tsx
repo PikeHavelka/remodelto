@@ -5,7 +5,7 @@ export const Footer = () => {
     <footer>
       <div className="container">
         <div className="rights-reserved">
-          <p>&copy; All rights reserved | REMODELTO</p>
+          <p>&copy; Všechna práva vyhrazena | REMODELTO</p>
         </div>
       </div>
     </footer>
