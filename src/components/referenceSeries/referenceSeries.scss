@@ -81,6 +81,10 @@
   .references-series {
     text-align: center;
 
+    .references-series-title-text-photo {
+      padding-bottom: 1rem;
+    }
+
     .references-series-subtitle {
       font-size: 1rem !important;
 
@@ -105,7 +109,7 @@
 @media (max-width: 735px) {
   .references-series {
 
-    .references-series-img-container{
+    .references-series-img-container {
       grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
       -ms-grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
     }
@@ -182,6 +186,18 @@
 
 .image-modal-hide {
   display: none;
+}
+
+.btn-hide {
+  display: none;
+}
+
+.btn-show {
+  display: block;
+}
+
+.references-series-left-rigth-btn {
+  display: flex;
 }
 
 @keyframes imageModal {

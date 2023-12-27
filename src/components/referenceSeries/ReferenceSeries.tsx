@@ -9,6 +9,7 @@ export const ReferenceSeries = (props: ReferenceSeriesProps) => {
   const [showModal, setShowModal] = useState(false)
   const [currentImage, setCurrentImage] = useState("")
   const [modalImageIndex, setModalImageIndex] = useState(0)
+  const [btnReference, setbtnReference] = useState(false)
   const refModal = useRef<HTMLDivElement>(null)
 
   const openModal = (imageIndex: number) => {
@@ -55,11 +56,27 @@ export const ReferenceSeries = (props: ReferenceSeriesProps) => {
     setModalImageIndex(modalImageIndex + 1)
   }
 
+  // Show and hide btn when size drop under 900
+  useEffect(() => {
+    if (window.innerWidth <= 900) setbtnReference(true)
+    else setbtnReference(false)
+
+    const handleResize = () => {
+      if (window.innerWidth <= 900) setbtnReference(true)
+      else setbtnReference(false)
+    }
+
+    window.addEventListener("resize", handleResize)
+
+    return () => window.removeEventListener("resize", handleResize)
+
+  }, [window.innerWidth])
+
   return (
     <>
       <div className="references-series-title-text-photo">
         <button
-          className="references-series-left-btn"
+          className={`references-series-left-btn ${btnReference ? "btn-hide" : "btn-show"}`}
           onClick={props.showPreviousSeriesComponent}
           title="předchozí reference">
           <ArrowLeft />
@@ -83,12 +100,21 @@ export const ReferenceSeries = (props: ReferenceSeriesProps) => {
           placeholderSrc={remodelToPlaceHolder}
         />
 
-        <button
-          className="references-series-right-btn"
-          onClick={props.showNextSeriesComponent}
-          title="následující reference">
-          <ArrowRight />
-        </button>
+        <div className="references-series-left-rigth-btn">
+          <button
+            className={`references-series-left-btn ${btnReference ? "btn-show" : "btn-hide"}`}
+            onClick={props.showPreviousSeriesComponent}
+            title="předchozí reference">
+            <ArrowLeft />
+          </button>
+
+          <button
+            className="references-series-right-btn"
+            onClick={props.showNextSeriesComponent}
+            title="následující reference">
+            <ArrowRight />
+          </button>
+        </div>
       </div>
 
       <div className={`${showModal ? "image-modal-show" : "image-modal-hide"}`} ref={refModal}>
