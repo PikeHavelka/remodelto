@@ -108,6 +108,8 @@ export const ReferenceSeries = (props: ReferenceSeriesProps) => {
             <ArrowLeft />
           </button>
 
+          <p className={`references-series-left-btn ${btnReference ? "btn-show" : "btn-hide"}`}>REMODELTO</p>
+
           <button
             className="references-series-right-btn"
             onClick={props.showNextSeriesComponent}

@@ -5,7 +5,7 @@
     @include FlexJustifyItemCenter;
     gap: 2rem;
 
-    padding: 3rem;
+    padding-block: 3rem;
     border-bottom: 5px solid var(--decoration-color);
 
     .references-series-left-btn,
@@ -130,7 +130,7 @@
   -o-transform: translate(-50%, -50%);
 
   width: 100%;
-  height: 100%;
+  height: 105%;
 
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 10;
@@ -198,6 +198,15 @@
 
 .references-series-left-rigth-btn {
   display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  align-items: center;
+  -webkit-align-items: center;
+  gap: 1rem;
+  
+  @include NormalText;
 }
 
 @keyframes imageModal {

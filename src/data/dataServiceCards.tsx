@@ -1,15 +1,15 @@
-import livingroom from "../assets/images/serviceCardImages/servicesCardLivingroom.png"
-import stairs from "../assets/images/serviceCardImages/servicesCardStairs.png"
+import kitchen from "../assets/images/serviceCardImages/servicesCardKitchen.jpg"
+import pool from "../assets/images/serviceCardImages/servicesCardPool.jpg"
 import buildingExtension from "../assets/images/serviceCardImages/servicesCardBuildingExtension.png"
 import paintingFloorPlan from "../assets/images/serviceCardImages/servicesCardPaintingFloorPlan.png"
 import outdoorPool from "../assets/images/serviceCardImages/servicesCardOutdoorPool.png"
-import roomRenovation from "../assets/images/serviceCardImages/servicesCardRoomRenovation.png"
+import kitchen2 from "../assets/images/serviceCardImages/servicesCardKitchen2.jpg"
 import { ServiceCards } from "../types/allTypes"
 
 const dataserviceCards: { [key: string]: ServiceCards } = {
   interiery: {
     id: 1,
-    image: livingroom,
+    image: kitchen,
     title: "Interiéry",
     text: <p>Jsme vaším partnerem pro <strong>interiérové řešení</strong> vašeho <strong>domova</strong> nebo <strong>komerčního prostoru</strong>. Naše stavební dovednosti a kreativita spolu s vášmi představami přemění každý interiér na místo, které odráží vaši jedinečnou osobnost a styl.</p>,
     moreInfo: "Více informací zde",
@@ -19,7 +19,7 @@ const dataserviceCards: { [key: string]: ServiceCards } = {
 
   renovace: {
     id: 2,
-    image: roomRenovation,
+    image: kitchen2,
     title: "Renovace",
     text: <p>Naše dovednosti a zkušenosti jsou vám k dispozici. Pokud máte <strong>starou</strong> nebo <strong>opotřebovanou budovu</strong>, neváhejte se na nás obrátit. Naše služby zahrnují <strong>kompletní renovaci, modernizaci</strong> a zvýšení energetické účinnosti vaší nemovitosti.</p>,
     moreInfo: "Více informací zde",
@@ -29,7 +29,7 @@ const dataserviceCards: { [key: string]: ServiceCards } = {
 
   stavebniPrace: {
     id: 3,
-    image: stairs,
+    image: pool,
     title: "Stavební práce",
     text: <p>Nabízíme <strong>stavební služby</strong> pro <strong>všechny typy budov</strong>, od <strong>malých domků</strong> po <strong>komerční stavby</strong>. Naši zkušení stavitelé a řemeslníci vám zajistí kvalitní výsledky, ať už jde o <strong>novou konstrukci, rozšíření stávající budovy</strong> nebo <strong>údržbu</strong>.</p>,
     moreInfo: "Více informací zde",
