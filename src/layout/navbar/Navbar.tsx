@@ -34,7 +34,7 @@ export const Navbar = () => {
           </li>
 
           <li>
-            <a href="/#spolupracujeme">Spolupracujeme</a>
+            <a href="/#spoluprace">Spolupráce</a>
           </li>
 
           <li>

@@ -1,7 +1,7 @@
 import kitchen from "../assets/images/serviceCardImages/servicesCardKitchen.jpg"
 import pool from "../assets/images/serviceCardImages/servicesCardPool.jpg"
 import buildingExtension from "../assets/images/serviceCardImages/servicesCardBuildingExtension.png"
-import paintingFloorPlan from "../assets/images/serviceCardImages/servicesCardPaintingFloorPlan.png"
+import consultation from "../assets/images/serviceCardImages/serviceCardConsultation.png"
 import outdoorPool from "../assets/images/serviceCardImages/servicesCardOutdoorPool.png"
 import kitchen2 from "../assets/images/serviceCardImages/servicesCardKitchen2.jpg"
 import { ServiceCards } from "../types/allTypes"
@@ -49,7 +49,7 @@ const dataserviceCards: { [key: string]: ServiceCards } = {
 
   konzultace: {
     id: 5,
-    image: paintingFloorPlan,
+    image: consultation,
     title: "Konzultace",
     text: <p>Máte nápad, ale nevíte, jak ho uskutečnit? Naši odborníci jsou tu, aby vám pomohli s <strong>plánováním</strong> a <strong>realizací vašeho projektu</strong>.</p>,
     moreInfo: "Více informací zde",
