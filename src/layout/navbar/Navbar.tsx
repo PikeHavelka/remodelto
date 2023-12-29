@@ -34,6 +34,10 @@ export const Navbar = () => {
           </li>
 
           <li>
+            <a href="/#spolupracujeme">Spolupracujeme</a>
+          </li>
+
+          <li>
             <a href="/#kontakt">Kontakt</a>
           </li>
         </ul>
@@ -74,6 +78,7 @@ export const Navbar = () => {
           position: "fixed",
           minWidth: "100%",
           height: 15,
+          top: "3.54rem",
           zIndex: "10"
         }}>
       </motion.div>

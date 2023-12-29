@@ -8,10 +8,11 @@
   font-family: var(--title-text);
   letter-spacing: 1.5px;
 
+  padding-block: .33rem;
   z-index: 10;
 
   background-color: var(--navbar-bg-color);
-  border-bottom: 1px solid var(--decoration-color);
+  border-bottom: 2px solid var(--decoration-color);
 
   .flex-wrapper {
     display: flex;
@@ -49,7 +50,7 @@
 
   ul {
     @include FlexJustifyItemCenter;
-    @include clamp("gap", 3rem, 7vw, 6rem);
+    @include clamp("gap", 3rem, 7vw, 4rem);
 
     list-style: none;
 
@@ -75,7 +76,7 @@
   }
 }
 
-@media (max-width: 755px) {
+@media (max-width: 1000px) {
   .navbar-main {
     .flex-wrapper {
       justify-content: space-around;
