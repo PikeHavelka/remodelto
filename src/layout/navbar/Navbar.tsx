@@ -78,7 +78,7 @@ export const Navbar = () => {
           position: "fixed",
           minWidth: "100%",
           height: 15,
-          top: "3.54rem",
+          top: "3.2rem",
           zIndex: "10"
         }}>
       </motion.div>
