@@ -5,7 +5,7 @@ export type ServiceCards = {
   image: string,
   title: string,
   text: React.ReactNode | string,
-  moreInfo: string,
+  moreInfo: string
   page: string,
   delay: number
 }

@@ -4,42 +4,47 @@
 	viewBox="0 0 256 256"
 >
 
-<g
-	strokeWidth="0"
-	strokeDasharray="none"
-	strokeLinecap="butt"
-	strokeLinejoin="miter"
-	strokeMiterlimit="10"
-	fill="none"
-	fillRule="nonzero"
-	opacity="1"
-	transform="translate(1.4065934065934016 1.4065934065934016) scale(2.81 2.81)"
->
-
-	<rect x="-13.59" y="39.95" rx="0" ry="0" width="117.17" height="10.1"
-		strokeWidth="1"
+	<g
+		strokeWidth="0"
 		strokeDasharray="none"
 		strokeLinecap="butt"
 		strokeLinejoin="miter"
 		strokeMiterlimit="10"
-		fill="var(--image-modal-icons)"
+		fill="none"
 		fillRule="nonzero"
 		opacity="1"
-		transform="matrix(0.7071 -0.7072 0.7072 0.7071 -18.6396 45.0044)"
-	/>
+		transform="translate(1.4065934065934016 1.4065934065934016)
+		scale(2.81 2.81)"
+	>
+		<path
+			d="M 3 90 c -0.768 0 -1.536 -0.293 -2.121 -0.879 c -1.172 -1.171 -1.172 -3.071 0 -4.242 l 84 -84 c 1.172 -1.172 3.07 -1.172 4.242 0 c 1.172 1.171 1.172 3.071 0 4.242 l -84 84 C 4.536 89.707 3.768 90 3 90 z"
+			strokeWidth="1"
+			strokeDasharray="none"
+			strokeLinecap="butt"
+			strokeLinejoin="miter"
+			strokeMiterlimit="10"
+			fill="white"
+			fillRule="nonzero"
+			opacity="1"
+			transform="matrix(1 0 0 1 0 0)"
+			strokeLinecap="round"
+		/>
 
-	<rect x="39.95" y="-13.59" rx="0" ry="0" width="10.1" height="117.17"
-		strokeWidth="1"
-		strokeDasharray="none"
-		strokeLinecap="butt"
-		strokeLinejoin="miter"
-		strokeMiterlimit="10"
-		fill="var(--image-modal-icons)"
-		fillRule="nonzero"
-		opacity="1"
-		transform="matrix(0.7071 -0.7071 0.7071 0.7071 -18.6396 45.0004)"
-	/>
-</g>
+		<path
+			d="M 87 90 c -0.768 0 -1.535 -0.293 -2.121 -0.879 l -84 -84 c -1.172 -1.171 -1.172 -3.071 0 -4.242 c 1.171 -1.172 3.071 -1.172 4.242 0 l 84 84 c 1.172 1.171 1.172 3.071 0 4.242 C 88.535 89.707 87.768 90 87 90 z"
+			strokeWidth="1"
+			strokeDasharray="none"
+			strokeLinecap="butt"
+			strokeLinejoin="miter"
+			strokeMiterlimit="10"
+			fill="white"
+			fillRule="nonzero"
+			opacity="1"
+			transform="matrix(1 0 0 1 0 0)"
+			strokeLinecap="round"
+		/>
+	</g>
 </svg>
+
 
 <!-- for modal -->

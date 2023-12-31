@@ -12,7 +12,7 @@ export const Navbar = () => {
 
   return (
     <nav className="navbar-main">
-      <div className="container flex-wrapper">
+      <div className="container-second flex-wrapper">
         <div className="navbar-logo">
           <a href="/" className="navbar-logo-link">
             <span className="logo-remodel">Remodel<span className="logo-to">TO</span></span>
@@ -35,6 +35,10 @@ export const Navbar = () => {
 
           <li>
             <a href="/#spoluprace">Spolupráce</a>
+          </li>
+
+          <li>
+            <a href="/#zajimavosti">Zajímavosti</a>
           </li>
 
           <li>

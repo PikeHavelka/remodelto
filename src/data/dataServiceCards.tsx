@@ -21,7 +21,7 @@ const dataserviceCards: { [key: string]: ServiceCards } = {
     id: 2,
     image: kitchen2,
     title: "Renovace",
-    text: <p>Naše dovednosti a zkušenosti jsou vám k dispozici. Pokud máte <strong>starou</strong> nebo <strong>opotřebovanou budovu</strong>, neváhejte se na nás obrátit. Naše služby zahrnují <strong>kompletní renovaci, modernizaci</strong> a zvýšení energetické účinnosti vaší nemovitosti.</p>,
+    text: <p>Pokud máte <strong>starou</strong> nebo <strong>opotřebovanou budovu</strong>, neváhejte se na nás obrátit. Naše služby zahrnují <strong>kompletní renovaci, modernizaci</strong> a zvýšení energetické účinnosti vaší nemovitosti.</p>,
     moreInfo: "Více informací zde",
     page: "/renovace",
     delay: .3
