@@ -1,10 +1,11 @@
 import "./interest.scss"
 import HastalskaNovinky from "../../assets/images/interest/HastalskaNovinky.png"
+import { Competition } from "../../components/competition/Competition"
 
 export const Interest = () => {
   return (
-    <section className="interest-section">
-      <article className="interest-article">
+    <section className="interest-section" id="zajimavosti">
+      <article className="interest-article container">
         <div className="interest-title-text-top">
           <div className="interest-subtitle">
             <h2>Zajímavosti</h2>
@@ -12,7 +13,7 @@ export const Interest = () => {
 
           <div className="interest-text">
             <p>
-              V ulici Haštalská na Starém Městě v Praze 1, naše stavební firma je hrdá na svou práci. Byt o velikosti 121 m² prošel nádhernou rekonstrukcí, kde jsme věnovali zvláštní pozornost výběru kvalitních materiálů s dlouhou životností a nízkou údržbou.
+              Naše stavební firma je hrdá na svou práci v ulici Haštalská na Starém Městě v Praze 1. Byt o velikosti 121 m² prošel nádhernou rekonstrukcí, kde jsme věnovali zvláštní pozornost výběru kvalitních materiálů s dlouhou životností a nízkou údržbou.
             </p>
 
             <br />
@@ -30,10 +31,20 @@ export const Interest = () => {
             <br />
 
             <p>
-              Jsme přesvědčeni, že naše práce není pouze o stavbě stěn a pokládání podlah, ale o transformaci prostoru na místo, které sdílí vaše životní příběhy a sní o tom, co může být. Jsme hrdí na to, jak jsme dokázali vytvořit nejen prostor, ale také domov, který odráží krásu a kvalitu naší práce. <a className="interest-href-italic" href="https://www.novinky.cz/clanek/bydleni-promena-mezonetoveho-bytu-mela-vyresit-nevhodne-drivejsi-upravy-40361284">
+              Jsme přesvědčeni, že naše práce není pouze o stavbě stěn a pokládání podlah, ale o transformaci prostoru na místo, které sdílí vaše životní příběhy a sní o tom, co může být.
+            </p>
+
+            <br />
+
+            <div className="interest-href-italic-container">
+              <a className="interest-href-italic" href="https://www.novinky.cz/clanek/bydleni-promena-mezonetoveho-bytu-mela-vyresit-nevhodne-drivejsi-upravy-40361284">
                 Novinky.cz
               </a>
-            </p>
+
+              <a className="interest-href-italic" href="https://www.archport.cz/">
+                Archport.cz
+              </a>
+            </div>
           </div>
         </div>
 
@@ -41,6 +52,8 @@ export const Interest = () => {
           <img src={HastalskaNovinky} alt="Novinky.cz, rekonstrukce bytu Haštalská" />
         </a>
       </article>
+
+      <Competition />
     </section>
   )
 }

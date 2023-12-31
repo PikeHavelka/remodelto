@@ -1,7 +1,9 @@
 @import "../../partials/mixins";
 
 .interest-section {
-  border-top: 10px solid var(--decoration-color);
+  @include clamp("padding-top", 3.5rem, 5vw, 6rem);
+  @include clamp("padding-bottom", 3.5rem, 10vw, 6rem);
+  background-color: var(--secondary-bg-color);
 
   .interest-article {
     display: flex;
@@ -12,23 +14,32 @@
     align-items: center;
     align-items: center;
     -webkit-align-items: center;
-    gap: 2.5rem;
+    gap: 5rem;
 
-    margin-top: 5rem;
+    text-align: center;
+
+    @include clamp("padding-bottom", 3.5rem, 10vw, 6rem);
 
     .interest-subtitle {
       @include TitleTextH2;
       text-align: center;
+      padding-bottom: 1rem;
     }
 
     .interest-text {
       @include NormalText;
+      text-align: justify;
     }
 
-    .interest-href-italic {
-      font-style: italic;
-      color: black;
-      text-decoration: underline;
+    .interest-href-italic-container {
+      text-align: center;
+
+      .interest-href-italic {
+        font-style: italic;
+        color: rgb(175, 0, 0);
+        text-decoration: underline;
+        margin-inline: 1rem;
+      }
     }
 
     img {
@@ -45,6 +56,10 @@
       -ms-flex-direction: column;
       -moz-flex-direction: column;
       -webkit-flex-direction: column;
+
+      .interest-text {
+        text-align: center;
+      }
 
       img {
         max-width: 100%;

@@ -1,4 +1,3 @@
-import { Interest } from "../../components"
 import "./renovation.scss"
 import { useRef, useEffect } from "react"
 import { Helmet } from "react-helmet-async"
@@ -92,8 +91,6 @@ export const Renovation = () => {
           </p>
         </div>
       </div>
-
-      <Interest />
     </section>
   )
 }

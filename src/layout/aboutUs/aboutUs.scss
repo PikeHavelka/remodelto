@@ -2,7 +2,7 @@
 
 .about-us-section {
   @include clamp("padding-top", 3.5rem, 30vw, 20rem);
-  @include clamp("padding-bottom", 3.5rem, 15vw, 10rem);
+  @include clamp("padding-bottom", 3.5rem, 10vw, 6rem);
 
   .about-us-article {
     @include FlexJustifyItemCenter;

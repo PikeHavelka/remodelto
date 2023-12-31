@@ -5,6 +5,7 @@
 
   background-color: var(--general-bg-color);
   box-shadow: 1px 1px 10px var(--general-color);
+
   border-bottom: 10px solid var(--decoration-color);
 
   display: flex;
@@ -20,7 +21,6 @@
 
   .services-img-container {
     overflow: hidden;
-
 
      img {
       width: 100%;

@@ -1,32 +1,50 @@
 @import "../../partials/mixins";
 
 .competition-section {
+  @include clamp("padding-top", 3.5rem, 5vw, 8rem);
+  @include clamp("padding-bottom", 3.5rem, 10vw, 5rem);
+  background-color: var(--general-bg-color);
 
   .competition-article {
-    margin-top: 5rem;
 
     .competition-subtitle {
       @include TitleTextH2;
-      @include clamp("font-size", .9rem, 6vw, 1.5rem);
+      @include clamp("font-size", .9rem, 5vw, 1.5rem);
       text-align: center;
+      padding-bottom: 1rem;
     }
 
     .competition-text {
       @include NormalText;
+      text-align: justify;
 
       .competition-href-italic {
+        display: block;
+
         font-style: italic;
-        color: black;
+        color: rgb(175, 0, 0);
+
         text-decoration: underline;
+        text-align: center;
       }
     }
 
     .competition-container-img {
       overflow: hidden;
-      
+
       img {
         max-width: 125%;
         margin-top: 5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 950px) {
+  .competition-section {
+    .competition-article {
+      .competition-text {
+        text-align: center;
       }
     }
   }

@@ -4,7 +4,7 @@ import HastalskaWinner from "../../assets/images/competition/HastalskaWinner.png
 export const Competition = () => {
   return (
     <section className="competition-section">
-      <article className="competition-article">
+      <article className="competition-article container">
         <div className="competition-title-text-top">
           <div className="competition-subtitle">
             <h2>Výhra interiéru roku, Haštalská Praha</h2>
@@ -30,10 +30,14 @@ export const Competition = () => {
             <br />
 
             <p>
-              Tento mezonetový byt se nestal jen obydlím. Stal se symbolem transformace a odvahy. Jsme hrdí, že jsme vytvořili místo, které není jen prostředím pro život, ale je to náš příběh o láskyplném spojení architektury a duše. Vítězný interiér roku, který je inspirací pro všechny, kteří hledají krásu v každém rohu svého domova. <a className="competition-href-italic" href="https://www.interierroku.cz/cs/interier/1161/#vice">
-                Interiérroku.cz
-              </a>
+              Tento mezonetový byt se nestal jen obydlím. Stal se symbolem transformace a odvahy. Jsme hrdí, že jsme vytvořili místo, které není jen prostředím pro život, ale je to náš příběh o láskyplném spojení architektury a duše. Vítězný interiér roku, který je inspirací pro všechny, kteří hledají krásu v každém rohu svého domova.
             </p>
+
+            <br />
+            
+            <a className="competition-href-italic" href="https://www.interierroku.cz/cs/interier/1161/#vice">
+              Interiérroku.cz
+            </a>
           </div>
         </div>
 

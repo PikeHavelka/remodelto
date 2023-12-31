@@ -35,7 +35,11 @@ export const ServiceCard = (props: ServiceCards) => {
         {props.text}
       </div>
 
-      <Link to={props.page} className="services-text-link">{props.moreInfo}</Link>
+      <Link
+        to={props.page}
+        className="services-text-link">
+        {props.moreInfo}
+      </Link>
     </motion.div>
   )
 }

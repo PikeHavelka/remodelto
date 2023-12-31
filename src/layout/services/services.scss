@@ -1,7 +1,8 @@
 @import "../../partials/mixins";
 
 .services {
-  @include clamp("padding-top", 3.5rem, 5vw, 8rem);
+  @include clamp("padding-top", 3.5rem, 5vw, 6rem);
+  @include clamp("padding-bottom", 3.5rem, 10vw, 6rem);
   background-color: var(--secondary-bg-color);
 
   .services-title-text-top {
@@ -35,6 +36,5 @@
     gap: 1.5rem;
 
     padding-inline: .5rem;
-    @include clamp("padding-bottom", 3.5rem, 10vw, 10rem);
   }
 }

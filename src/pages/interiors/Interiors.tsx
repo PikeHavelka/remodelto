@@ -1,6 +1,5 @@
 import "./interiors.scss"
 import { useRef, useEffect } from "react"
-import { Interest } from "../../components"
 import { Competition } from "../../components/competition/Competition"
 import { Helmet } from "react-helmet-async"
 
@@ -98,9 +97,6 @@ export const Interiors = () => {
           </p>
         </div>
       </div>
-
-      <Interest />
-      <Competition />
     </section>
   )
 }

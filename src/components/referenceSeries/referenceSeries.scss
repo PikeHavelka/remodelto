@@ -17,7 +17,7 @@
       padding: .35rem .2rem .2rem;
       cursor: pointer;
 
-      &:hover {
+      &:hover:not(p) {
         background: rgba(0, 0, 0, 0.05);
       }
     }
@@ -179,7 +179,7 @@
     }
 
     .image-modal-decline-cross {
-      margin-inline: .8rem;
+      margin-inline: .5rem;
     }
   }
 }
