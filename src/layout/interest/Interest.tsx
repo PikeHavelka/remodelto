@@ -40,10 +40,6 @@ export const Interest = () => {
               <a className="interest-href-italic" href="https://www.novinky.cz/clanek/bydleni-promena-mezonetoveho-bytu-mela-vyresit-nevhodne-drivejsi-upravy-40361284">
                 Novinky.cz
               </a>
-
-              <a className="interest-href-italic" href="https://www.archport.cz/">
-                Archport.cz
-              </a>
             </div>
           </div>
         </div>

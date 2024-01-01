@@ -2,7 +2,6 @@
 
 .interest-section {
   @include clamp("padding-top", 3.5rem, 5vw, 6rem);
-  @include clamp("padding-bottom", 3.5rem, 10vw, 6rem);
   background-color: var(--secondary-bg-color);
 
   .interest-article {
@@ -18,7 +17,7 @@
 
     text-align: center;
 
-    @include clamp("padding-bottom", 3.5rem, 10vw, 6rem);
+    @include clamp("padding-bottom", 3.5rem, 10vw, 5rem);
 
     .interest-subtitle {
       @include TitleTextH2;
