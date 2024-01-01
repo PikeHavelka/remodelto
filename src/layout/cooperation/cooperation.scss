@@ -1,1 +1,25 @@
 @import "../../partials/mixins";
+
+.cooperation {
+  @include clamp("padding-top", 1rem, 5vw, 2rem);
+  @include clamp("padding-bottom", 2.5rem, 10vw, 4rem);
+  background-color: var(--secondary-bg-color);
+
+  .interest-subtitle {
+    @include TitleTextH2;
+    text-align: center;
+    padding-block: 1.5rem;
+  }
+
+  .cooperation-logos-container {
+    @include FlexJustifyItemCenter;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    max-width: 45rem;
+
+    .logo {
+      border-radius: 50%;
+      max-width: 5rem;
+    }
+  }
+}
