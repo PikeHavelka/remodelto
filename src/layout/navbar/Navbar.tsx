@@ -34,11 +34,11 @@ export const Navbar = () => {
           </li>
 
           <li>
-            <a href="/#spoluprace">Spolupráce</a>
-          </li>
-
-          <li>
             <a href="/#zajimavosti">Zajímavosti</a>
+          </li>
+          
+          <li>
+            <a href="/#spoluprace">Spolupráce</a>
           </li>
 
           <li>

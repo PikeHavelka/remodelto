@@ -23,7 +23,7 @@ export const Contact = () => {
           <FacebookIcon />
         </a>
 
-        <a href="mailto:homerekojo@gmail.com" aria-label="Odkaz na email majitele firmy">
+        <a href="mailto:remodelto@gmail.com" aria-label="Odkaz na email majitele firmy">
           <EmailIcon />
         </a>
 
