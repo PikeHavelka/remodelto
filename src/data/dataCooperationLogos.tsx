@@ -1,4 +1,4 @@
-import { Dek, DesignPro, Grimax, Koukolova, Pollok, Ptacek, Siko, StudioArcht, VyberReality, MServis, ArchPort } from "../assets/logos"
+import { Dek, DesignPro, Grimax, Koukolova, Pollok, Ptacek, Siko, StudioArcht, VyberReality, MServis, ArchPort, TomDvorak } from "../assets/logos"
 import { logosTypes } from "../types/allTypes"
 
 const logosData: logosTypes[] = [
@@ -13,6 +13,7 @@ const logosData: logosTypes[] = [
   { img: VyberReality, url: "https://www.vyber-reality.cz/", ariaLabel: "Odkaz na stránku firmy VyberReality" },
   { img: MServis, url: "http://www.m-servis.cz/", ariaLabel: "Odkaz na stránku firmy MServis" },
   { img: ArchPort, url: "https://www.archport.cz/", ariaLabel: "Odkaz na stránku firmy ArchPort" },
+  { img: TomDvorak, url: "https://tomdvorak.cz/", ariaLabel: "Odkaz na stránku firmy Tom Dovrak" },
 ]
 
 export default logosData

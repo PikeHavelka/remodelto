@@ -1,7 +1,7 @@
 @import "../../partials/mixins";
 
 .cooperation {
-  @include clamp("padding-top", 1rem, 5vw, 2rem);
+  @include clamp("padding-top", 1rem, 5vw, 3.5rem);
   @include clamp("padding-bottom", 2.5rem, 10vw, 4rem);
   background-color: var(--secondary-bg-color);
 
