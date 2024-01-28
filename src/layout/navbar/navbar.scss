@@ -26,26 +26,8 @@
       -webkit-align-items: center;
   }
 
-  .navbar-logo {
-    padding: .1rem 0;
-    font-size: .85rem;
-
-    .logo-remodel {
-      display: block;
-      text-align: center;
-
-      color: var(--general-color);
-      border-bottom: 1px solid var(--decoration-color);
-    }
-
-    .logo-to {
-      color: var(--general-bg-color);
-      text-shadow: 0px 0px 5px var(--secondary-color);
-    }
-
-    .logo-motto {
-      color: var(--general-color);
-    }
+  .navbar-logo img {
+    max-width: 13rem;
   }
 
   ul {
