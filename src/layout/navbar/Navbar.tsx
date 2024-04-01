@@ -1,7 +1,7 @@
 import "./navbar.scss"
 import { useState } from "react"
 import { useScroll, motion } from "framer-motion"
-import logo from "../../assets/images/logo2.png"
+import remodelToLogo from "../../assets/images/remodelToLogo.png"
 
 export const Navbar = () => {
   const [showMenu, setShowMenu] = useState(false)
@@ -16,7 +16,7 @@ export const Navbar = () => {
       <div className="container-second flex-wrapper">
         <div className="navbar-logo">
           <a href="/" className="navbar-logo-link">
-            <img src={logo} alt="Logo firmy" />
+            <img src={remodelToLogo} alt="Logo firmy" />
           </a>
         </div>
 
@@ -35,10 +35,6 @@ export const Navbar = () => {
 
           <li>
             <a href="/#zajimavosti">Zajímavosti</a>
-          </li>
-          
-          <li>
-            <a href="/#spoluprace">Spolupráce</a>
           </li>
 
           <li>
@@ -82,7 +78,7 @@ export const Navbar = () => {
           position: "fixed",
           minWidth: "100%",
           height: 15,
-          top: "3.2rem",
+          top: "3.4rem",
           zIndex: "10"
         }}>
       </motion.div>

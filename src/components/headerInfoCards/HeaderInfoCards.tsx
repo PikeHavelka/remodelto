@@ -1,5 +1,5 @@
 import "./headerInfoCards.scss"
-import logo from "../../assets/images/remodelToLogo.jpg"
+import remodeltoIcon from "../../assets/images/remodelToIcon.png"
 import { HouseIcon, FlatIcon } from "../../assets/svgIcons/"
 
 export const HeaderInfoCards = () => {
@@ -18,7 +18,7 @@ export const HeaderInfoCards = () => {
 
       <div className="header-about-us-info-card">
         <div className="header-card-subtitle">
-          <img className="header-card-company-logo" src={logo} alt="logo firmy RemodelTO" />
+          <img className="header-card-company-logo" src={remodeltoIcon} alt="logo firmy RemodelTO" />
           <h2>Stavební firma
             <span className="header-card-logo-remodelTO"> RemodelTO</span>
           </h2>

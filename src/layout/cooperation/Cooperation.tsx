@@ -3,7 +3,7 @@ import dataCooperationLogos from "../../data/dataCooperationLogos"
 
 export const Cooperation = () => {
   return (
-    <section id="spoluprace" className="cooperation">
+    <section className="cooperation">
       <h2 className="interest-subtitle">Naše spolupráce</h2>
 
       <div className="cooperation-logos-container container">
