@@ -77,8 +77,8 @@ export const Navbar = () => {
           transformOrigin: "0",
           position: "fixed",
           minWidth: "100%",
-          height: 15,
-          top: "3.4rem",
+          height: 12,
+          top: "3.3rem",
           zIndex: "10"
         }}>
       </motion.div>
