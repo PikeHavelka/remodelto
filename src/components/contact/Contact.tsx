@@ -1,13 +1,10 @@
 import "./contact.scss"
 import OtradovecJan from "../../assets/images/OtradovecJan.jpg"
 import { PhoneIcon, EmailIcon, FacebookIcon, InstagramIcon } from "../../assets/svgIcons"
-import { EmailPhone } from "../index"
 
 export const Contact = () => {
   return (
     <section className="contact-section" id="kontakt">
-      <EmailPhone />
-      
       <div className="contact-section-company-owner">
         <img src={OtradovecJan} alt="majitel firmy" />
         <p>Jan Otradovec</p>
