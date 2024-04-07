@@ -30,3 +30,34 @@ export type logosTypes = {
   url: string,
   ariaLabel: string
 }
+
+
+// FORM TYPES
+export type FormField = {
+  label: {
+    htmlFor: string,
+    labelText: string
+  },
+
+  input?: FieldAttributes,
+  textArea?: FieldAttributes
+}
+
+export type FormFieldProps =  {
+  label: {
+    htmlFor: string,
+    labelText: string
+  },
+
+  input?: FieldAttributes,
+  textArea?: FieldAttributes
+}
+
+type FieldAttributes = {
+  type: string,
+  name: string,
+  id: string,
+  placeholder: string,
+  ariaRequired: boolean
+}
+/******************************************/
