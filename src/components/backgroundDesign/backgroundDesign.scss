@@ -11,16 +11,3 @@
   background-position: center center;
   @include clamp("height", 15rem, 25vw, 25rem);
 }
-
-.section-bg3 {
-  background: url("../../assets/images/backgrounds/kitchenBackground2.jpg") no-repeat center/cover;
-  background-position: center center;
-  height: 40rem;
-
-  .overlay {
-    background-color: var(--overlay-bg-color);
-
-    height: 100%;
-    width: 100%;
-  }
-}
