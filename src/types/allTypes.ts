@@ -68,7 +68,7 @@ type FieldAttributes = {
   name: string,
   id: string,
   placeholder: string,
-  pattern: string | RegExp,
+  pattern: string,
   ariaRequired: boolean
 }
 /******************************************/
