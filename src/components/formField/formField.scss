@@ -1,0 +1,57 @@
+@import "../../partials/mixins";
+
+.form-field {
+  label {
+    @include TitleTextH3;
+    display: block;
+    padding-bottom: .4rem;
+    color: white;
+    text-align: center;
+  }
+
+  .input-field-container {
+    .input-field {
+      @include NormalText;
+
+      outline: none;
+      border: none;
+      border-radius: 5px;
+
+      padding: .5rem;
+      margin-bottom: .5rem;
+
+      width: 100%;
+    }
+
+    .textarea-field {
+      @include NormalText;
+      padding: .5rem;
+      margin-bottom: .5rem;
+
+      outline: none;
+      border: none;
+      border-radius: 5px;
+
+      height: 15rem;
+      width: 100%;
+    }
+
+    .form-error-message {
+      display: none;
+    }
+
+    input:invalid ~ .form-error-message {
+      @include NormalText;
+      color: rgb(238, 0, 0);
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 399px){
+  .form-field {
+    .input-field {
+      text-align: center;
+    }
+  }
+}

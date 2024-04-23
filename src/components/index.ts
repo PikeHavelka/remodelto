@@ -1,6 +1,5 @@
 export { BackgroundDesign1 } from "./backgroundDesign/BackgroundDesign1"
 export { BackgroundDesign2 } from "./backgroundDesign/BackgroundDesign2"
-export { BackgroundDesign3 } from "./backgroundDesign/BackgroundDesign3"
 export { OpeningHours } from "./openingHours/OpeningHours"
 export { Contact } from "./contact/Contact"
 export { HeaderInfoCards } from "./headerInfoCards/HeaderInfoCards"

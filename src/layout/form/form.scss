@@ -1,0 +1,58 @@
+@import "../../partials/mixins";
+
+.form-section {
+  background: url("../../assets/images/backgrounds/kitchenBackground2.jpg") no-repeat center/cover;
+  background-position: center center;
+  height: 45rem;
+  
+  .overlay {
+    background-color: var(--overlay-bg-color);
+
+    height: 100%;
+    width: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+    .input-form-container {
+      display: flex;
+      gap: 1rem;
+
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      padding: .5rem;
+
+      .form-btn { 
+        @include NormalText;
+        cursor: pointer;
+    
+        border: none;
+        border-radius: 5px;
+        
+        padding: .5rem .9rem;
+        margin-top: 1.5rem;
+        
+        color: white;
+        background: var(--form-button-color);
+        
+        &:hover {
+          background: var(--form-button-hover-color);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 399px){
+  .form-section {
+    .overlay {
+      .input-form-container {
+        display: block;
+      }
+    }
+  }
+}

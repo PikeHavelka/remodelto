@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom"
-import { Header, Footer, Navbar, Prefooter } from "../../layout/index"
-import { BackgroundDesign3 } from "../../components/index"
+import { Header, Footer, Navbar, Prefooter, Form } from "../../layout/index"
 
 export const SharedLayout = () => {
   return (
@@ -8,7 +7,7 @@ export const SharedLayout = () => {
       <Navbar />
       <Header />
       <Outlet />
-      <BackgroundDesign3 />
+      <Form />
       <Prefooter />
       <Footer />
     </>

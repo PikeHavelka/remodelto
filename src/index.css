@@ -131,12 +131,14 @@
   /* Decoration colors */
   --decoration-color: rgb(65, 34, 0);
   --button-color: rgba(65, 34, 0);
+  --form-button-color: rgb(255, 123, 0);
+  --form-button-hover-color: rgb(255, 141, 33);
 
   /* Background colors */
   --general-bg-color: rgb(255, 255, 255);
   --secondary-bg-color: rgb(245, 245, 245);
   --navbar-bg-color: rgba(255, 255, 255, 0.9);
-  --overlay-bg-color: rgba(0, 0, 0, 0.5);
+  --overlay-bg-color: rgba(0, 0, 0, 0.75);
   --footer-bg-color: #292B2F;
 
   /* SVG Icon colors */
