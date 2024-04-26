@@ -1,5 +1,5 @@
 import { Services, AboutUs, References, Interest, Cooperation } from "../index"
-import { BackgroundDesign1, BackgroundDesign2 } from "../../components/index"
+import { BackgroundDesign1, BackgroundDesign2, ContactForm } from "../../components/index"
 
 export const Main = () => {
 
@@ -12,6 +12,7 @@ export const Main = () => {
       <References />
       <Interest />
       <Cooperation />
+      <ContactForm />
     </main>
   )
 }
