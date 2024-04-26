@@ -1,4 +1,4 @@
-import { ChangeEvent, MouseEventHandler } from "react"
+import { MouseEventHandler } from "react"
 
 export type ServiceCards = {
   id: number,
@@ -30,45 +30,3 @@ export type logosTypes = {
   url: string,
   ariaLabel: string
 }
-
-// FORM TYPES
-export type FormField = {
-  label: {
-    htmlFor: string,
-    labelText: string
-  },
-
-  input?: FieldAttributes,
-  textArea?: FieldAttributes,
-
-  span: {
-    errorMessage: string
-  },
-}
-
-export type FormFieldProps =  {
-  label: {
-    htmlFor: string,
-    labelText: string
-  },
-
-  input?: FieldAttributes,
-  textArea?: FieldAttributes,
-
-  span: {
-    errorMessage: string
-  },
-
-  onChange: React.ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement>,
-  value: string
-}
-
-type FieldAttributes = {
-  type: string,
-  name: string,
-  id: string,
-  placeholder: string,
-  pattern: string,
-  ariaRequired: boolean
-}
-/******************************************/
