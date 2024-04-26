@@ -1,0 +1,52 @@
+@import "../../partials/mixins";
+
+.contact-form-section {
+  @include clamp("padding-top", 3.5rem, 5vw, 6rem);
+  @include clamp("padding-bottom", 3.5rem, 10vw, 6rem);
+
+  .contact-form {
+    @include NormalText;
+    max-width: 25rem;
+  
+    .contact-form-field-container {
+      display: flex;
+      flex-direction: column;
+      gap: .3rem;
+      
+      .message-field {
+        height: 12rem;
+        resize: none;
+      }
+      
+      .form-fields {
+        @include NormalText;
+
+        outline: none;
+        border: none;
+        
+        padding-bottom: .3rem;
+        margin-bottom: 1rem;
+  
+        border-bottom: 1px solid var(--decoration-color);
+      }
+    }
+  
+    .contact-form-btn {
+      @include NormalText;
+  
+      border: none;
+      outline: none;
+  
+      padding: .3rem .5rem;
+      width: 100%;
+      cursor: pointer;
+  
+      color: white;
+      background: #F77D24;
+  
+      &:hover {
+        background: #f76e0c;
+      }
+    }
+  }
+}

@@ -13,29 +13,48 @@ export const ContactForm = () => {
 
       validationSchema={validationSchema}
 
-      onSubmit={(values, {resetForm}) => {
+      onSubmit={(values, { resetForm }) => {
         console.log(values)
         resetForm()
       }}
     >
       <section className="contact-form-section">
-        <Form>
+        <Form className="contact-form container">
           <div className="contact-form-field-container">
             <label htmlFor="subject">Předmět zprávy</label>
-            <Field id="subject" name="subject" type="text"></Field>
+            <Field
+              className="subject-field form-fields"
+              id="subject"
+              name="subject"
+              type="text"
+              placeholder="Rekonstrukce koupelny">
+            </Field>
           </div>
 
           <div className="contact-form-field-container">
             <label htmlFor="email">Emailová adresa</label>
-            <Field id="email" name="email" type="text"></Field>
+            <Field
+              className="email-field form-fields"
+              id="email"
+              name="email"
+              type="text"
+              placeholder="vase.schranka@email.cz">
+            </Field>
           </div>
 
           <div className="contact-form-field-container">
             <label htmlFor="message">Zpráva pro příjemce</label>
-            <Field id="message" name="message" type="text" as="textarea"></Field>
+            <Field
+              className="message-field form-fields"
+              id="message"
+              name="message"
+              type="text"
+              as="textarea"
+              placeholder={"Dobrý den,\n \nrád bych si od Vaší firmy nechal plně zrekonstruovat interiér koupelny.\n \nS pozdravem\n \nPetr Novák"}>
+            </Field>
           </div>
 
-          <button type="submit">Odeslat</button>
+          <button className="contact-form-btn" type="submit">Odeslat</button>
         </Form>
       </section>
     </Formik>
