@@ -1,5 +1,6 @@
 import "./contactForm.scss"
 import { Formik, Form, Field, ErrorMessage } from "formik"
+import { validationSchema } from "../contactFormValidation/ContactFormValidation"
 
 export const ContactForm = () => {
   return (
@@ -9,6 +10,8 @@ export const ContactForm = () => {
         email: "",
         message: ""
       }}
+
+      validationSchema={validationSchema}
 
       onSubmit={(values, {resetForm}) => {
         console.log(values)
