@@ -7,14 +7,20 @@
   .contact-form {
     @include NormalText;
     max-width: 25rem;
+
+    &>* {
+      margin-bottom: .5rem;
+    }
   
     .contact-form-field-container {
       display: flex;
       flex-direction: column;
       gap: .3rem;
+
+      position: relative;
       
       .message-field {
-        height: 12rem;
+        height: 10rem;
         resize: none;
       }
       
@@ -28,6 +34,13 @@
         margin-bottom: 1rem;
   
         border-bottom: 1px solid var(--decoration-color);
+      }
+
+      .form-error-message {
+        position: absolute;
+        top: 3.5rem;
+
+        color: red;
       }
     }
   

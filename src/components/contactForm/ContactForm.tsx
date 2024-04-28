@@ -27,8 +27,15 @@ export const ContactForm = () => {
               id="subject"
               name="subject"
               type="text"
-              placeholder="Rekonstrukce koupelny">
+              placeholder="Rekonstrukce koupelny"
+              required>
             </Field>
+
+            <ErrorMessage
+              className="form-error-message"
+              component="span"
+              name="subject"
+            />
           </div>
 
           <div className="contact-form-field-container">
@@ -38,8 +45,15 @@ export const ContactForm = () => {
               id="email"
               name="email"
               type="text"
-              placeholder="vase.schranka@email.cz">
+              placeholder="vase.schranka@email.cz"
+              required>
             </Field>
+
+            <ErrorMessage 
+              className="form-error-message"
+              component="span"
+              name="email"
+            />
           </div>
 
           <div className="contact-form-field-container">
@@ -50,8 +64,15 @@ export const ContactForm = () => {
               name="message"
               type="text"
               as="textarea"
-              placeholder={"Dobrý den,\n \nrád bych si od Vaší firmy nechal plně zrekonstruovat interiér koupelny.\n \nS pozdravem\n \nPetr Novák"}>
+              placeholder={"Dobrý den,\n \nrád bych si od Vaší firmy nechal plně zrekonstruovat interiér koupelny.\n \nPetr Novák"}
+              required>
             </Field>
+
+            <ErrorMessage
+              className="form-error-message"
+              component="span"
+              name="message"
+            />
           </div>
 
           <button className="contact-form-btn" type="submit">Odeslat</button>
