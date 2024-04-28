@@ -1,6 +1,7 @@
 import "./contactForm.scss"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 import { validationSchema } from "./Validation"
+import axios from "axios"
 
 export const ContactForm = () => {
   return (
@@ -14,8 +15,19 @@ export const ContactForm = () => {
       validationSchema={validationSchema}
 
       onSubmit={(values, { resetForm }) => {
-        console.log(values)
-        resetForm()
+        setTimeout(() => {
+          axios.post("http://localhost:5000", values)
+          .then(response => {
+            alert("Zpráva byla úspěšně odeslána!") // TODO: nahradit modálním oknem
+            console.log(response) // TODO: později odstranit
+          })
+          .catch(err => {
+            alert("Něco se pokazilo!") // TODO: nahradit modálním oknem
+            console.log(err) // TODO: později odstranit
+          })
+    
+          resetForm()
+        }, 400)
       }}
     >
       <section className="contact-form-section">
@@ -49,7 +61,7 @@ export const ContactForm = () => {
               required>
             </Field>
 
-            <ErrorMessage 
+            <ErrorMessage
               className="form-error-message"
               component="span"
               name="email"
