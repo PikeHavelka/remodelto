@@ -1,0 +1,6 @@
+export { default as Kitchen } from "../serviceCardImages/servicesCardKitchen.jpg"
+export { default as Pool } from "../serviceCardImages/servicesCardPool.jpg"
+export { default as BuildingExtension } from "../serviceCardImages/servicesCardBuildingExtension.png"
+export { default as Consultation } from "../serviceCardImages/serviceCardConsultation.png"
+export { default as OutdoorPool } from "../serviceCardImages/servicesCardOutdoorPool.png"
+export { default as Kitchen2 } from "../serviceCardImages/servicesCardKitchen2.jpg"
