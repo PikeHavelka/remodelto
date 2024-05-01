@@ -1,0 +1,72 @@
+@import "../../../partials/mixins";
+
+.modal-window {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @include clamp("width", 10rem, 85vw, 25rem);
+  z-index: 10;
+  text-align: center;
+  padding: 2rem;
+  border-radius: var(--form-modal-radius);
+
+  box-shadow: 0px 0px 1px grey;
+  background: url("../../../assets/images/FormModalBackground.png");
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+
+    .modal-heading {
+      @include TitleTextH1;
+      text-transform: none;
+
+      margin-bottom: .8rem;
+      margin-top: 2rem;
+    }
+    
+    .modal-text {
+      @include NormalText;
+      font-style: italic;
+    }
+
+    .modal-icon {
+      position: absolute;
+      left: 50%;
+      top: -2.7rem;
+      transform: translate(-50%);
+        -webkit-transform: translate(-50%);
+        -ms-transform: translate(-50%);
+        -moz-transform: translate(-50%);
+    }
+
+    .modal-btn,
+    .modal-btn-unsuccess {
+      @include TitleTextH3;
+
+      border: none;
+      outline: none;
+
+      color: white;
+      background: var(--success-btn-color);
+
+      cursor: pointer;
+      padding: .5rem;
+      border-radius: var(--form-modal-radius);
+
+      &:hover {
+        background: var(--successs-btn-hover-color);
+      }
+    }
+
+    .modal-btn-unsuccess {
+      background: var(--unsuccess-btn-color);
+
+      &:hover {
+        background: var(--unsuccess-btn-hover-color);
+      }
+    }
+}
