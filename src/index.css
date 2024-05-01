@@ -127,10 +127,14 @@
 
   /* Font hover colors */
   --secondary-hover-color: rgba(65, 34, 0, 0.8);
+  --unsuccess-btn-hover-color: rgb(218, 14, 14);
+  --successs-btn-hover-color: rgb(70, 177, 16);
 
   /* Decoration colors */
   --decoration-color: rgb(65, 34, 0);
   --button-color: rgba(65, 34, 0);
+  --unsuccess-btn-color: rgb(255, 0, 0);;
+  --success-btn-color: rgb(82, 196, 26);
   --form-button-color: rgb(255, 123, 0);
   --form-button-hover-color: rgb(255, 141, 33);
 
@@ -161,4 +165,7 @@
 
   /* Scrolling */
   /* scroll-behavior: smooth; */
+
+  /* Others */
+  --form-modal-radius: 10px;
 }

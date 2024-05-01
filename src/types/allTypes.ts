@@ -25,7 +25,7 @@ export type ReferenceSeriesProps = ReferenceSeries & {
   showNextSeriesComponent: MouseEventHandler
 }
 
-export type logosTypes = {
+export type Logos = {
   img: string,
   url: string,
   ariaLabel: string

@@ -1,7 +1,7 @@
 import { Dek, DesignPro, Grimax, Koukolova, Pollok, Ptacek, Siko, StudioArcht, VyberReality, MServis, ArchPort, TomDvorak } from "../assets/logos"
-import { logosTypes } from "../types/allTypes"
+import { Logos } from "../types/allTypes"
 
-const logosData: logosTypes[] = [
+const logosData: Logos[] = [
   { img: Dek, url: "https://www.dek.cz/", ariaLabel: "Odkaz na stránku firmy Dek" },
   { img: DesignPro, url: "https://www.designpro.cz/", ariaLabel: "Odkaz na stránku firmy DesignPro" },
   { img: Grimax, url: "https://www.grimax.cz/", ariaLabel: "Odkaz na stránku firmy Grimax" },

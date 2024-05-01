@@ -3,7 +3,7 @@ import { LazyLoadImage } from "react-lazy-load-image-component"
 import remodelToPlaceHolder from "../../assets/images/remodelToPlaceHolder.jpg"
 import { ReferenceSeriesProps } from "../../types/allTypes"
 import { useState, useRef, useEffect } from "react"
-import { DeclineCross, DoubleArrowLeft, DoubleArrowRight, ArrowRight, ArrowLeft } from "../../assets/svgIcons"
+import { DeclineCrossIcon, DoubleArrowLeftIcon, DoubleArrowRightIcon, ArrowRightIcon, ArrowLeftIcon } from "../../assets/svgIcons"
 
 export const ReferenceSeries = (props: ReferenceSeriesProps) => {
   const [showModal, setShowModal] = useState(false)
@@ -79,7 +79,7 @@ export const ReferenceSeries = (props: ReferenceSeriesProps) => {
           className={`references-series-left-btn ${btnReference ? "btn-hide" : "btn-show"}`}
           onClick={props.showPreviousSeriesComponent}
           title="předchozí reference">
-          <ArrowLeft />
+          <ArrowLeftIcon />
         </button>
 
         <div className="references-series-title-text">
@@ -105,7 +105,7 @@ export const ReferenceSeries = (props: ReferenceSeriesProps) => {
             className={`references-series-left-btn ${btnReference ? "btn-show" : "btn-hide"}`}
             onClick={props.showPreviousSeriesComponent}
             title="předchozí reference">
-            <ArrowLeft />
+            <ArrowLeftIcon />
           </button>
 
           <p className={`references-series-left-btn ${btnReference ? "btn-show" : "btn-hide"}`}>REMODELTO</p>
@@ -114,7 +114,7 @@ export const ReferenceSeries = (props: ReferenceSeriesProps) => {
             className="references-series-right-btn"
             onClick={props.showNextSeriesComponent}
             title="následující reference">
-            <ArrowRight />
+            <ArrowRightIcon />
           </button>
         </div>
       </div>
@@ -125,15 +125,15 @@ export const ReferenceSeries = (props: ReferenceSeriesProps) => {
 
         <div className="image-modal-buttons">
           <button className="image-modal-left-arrow" onClick={handlePreviousImage}>
-            <DoubleArrowLeft />
+            <DoubleArrowLeftIcon />
           </button>
 
           <button className="image-modal-decline-cross" onClick={handleCloseModal}>
-            <DeclineCross />
+            <DeclineCrossIcon />
           </button>
 
           <button className="image-modal-right-arrow" onClick={handleNextImage}>
-            <DoubleArrowRight />
+            <DoubleArrowRightIcon />
           </button>
         </div>
       </div>

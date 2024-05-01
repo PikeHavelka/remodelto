@@ -1,9 +1,21 @@
-import "./contactForm.scss"
 import { Formik, Form, Field, ErrorMessage } from "formik"
-import { validationSchema } from "./Validation"
+import { useState } from "react"
 import axios from "axios"
+import { validationSchema } from "./Validation"
+import { SuccessModal } from "./modalWindow/SuccessModal"
+import { UnsuccessModal } from "./modalWindow/UnsuccessModal"
+import "./contactForm.scss"
 
 export const ContactForm = () => {
+  const [showSucces, setShowSuccess] = useState(false)
+  const [showUnsuccess, setShowUnsuccess] = useState(false)
+
+  const handleModal = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if(e.currentTarget.className === "modal-btn-unsuccess") {
+      setShowUnsuccess(false)
+    } else setShowSuccess(false)
+  }
+
   return (
     <Formik
       initialValues={{
@@ -18,12 +30,12 @@ export const ContactForm = () => {
         setTimeout(() => {
           axios.post("http://localhost:5000", values)
           .then(response => {
-            alert("Zpráva byla úspěšně odeslána!") // TODO: nahradit modálním oknem
-            console.log(response) // TODO: později odstranit
+            setShowSuccess(true)
+            // console.log(response)
           })
           .catch(err => {
-            alert("Něco se pokazilo!") // TODO: nahradit modálním oknem
-            console.log(err) // TODO: později odstranit
+            setShowUnsuccess(true)
+            // console.log(err)
           })
     
           resetForm()
@@ -31,6 +43,10 @@ export const ContactForm = () => {
       }}
     >
       <section className="contact-form-section">
+
+      {showSucces ? <SuccessModal handleModal={handleModal} /> : null}
+      {showUnsuccess ? <UnsuccessModal handleModal={handleModal} /> : null}
+
         <Form className="contact-form container">
           <div className="contact-form-field-container">
             <label htmlFor="subject">Předmět zprávy</label>
